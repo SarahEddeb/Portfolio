@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "../app/page.module.css";
 import styled from "styled-components";
 
+
 const NavBar = styled.div`
   display: flex;
   width: 100%;
@@ -513,6 +514,8 @@ const Thumbnail = styled.div`
 `;
 
 export default function Home() {
+  const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || '';
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -520,12 +523,13 @@ export default function Home() {
           <LogoDiv>
             <Image
               className={styles.logo}
-              src="/saraheddeb.svg"
+              src={`${assetPrefix}/saraheddeb.svg`}
               alt="Sarah Eddeb Logo"
               width={38}
               height={38}
               priority
             />
+            {console.log(assetPrefix)}
             <Logo>Sarah Eddeb</Logo>
           </LogoDiv>
           <NavLinksDiv>
