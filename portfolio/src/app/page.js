@@ -537,7 +537,7 @@ export default function Home() {
       </div>
 
       <HeaderSection>
-        <H2>I'm Sarah Eddeb</H2>
+        <H2>I’m Sarah Eddeb</H2>
         <HeaderRoleSection>
           <HeaderSubSection>
             <H1>UI/UX Designer</H1>
@@ -664,7 +664,7 @@ export default function Home() {
       <AboutSection>
         <AboutSectionLeft>
           <H4>ABOUT ME</H4>
-          <H3>Sarah's Backstory</H3>
+          <H3>Sarah’s Backstory</H3>
           <AboutFactsDiv>
             <AboutFacts>
               <H2>20+</H2>
@@ -694,7 +694,7 @@ export default function Home() {
       </AboutSection>
 
       <ContactSection>
-        <H3>Let's Connect</H3>
+        <H3>Let’s Connect</H3>
         <H2>saraheddeb@gmail.com</H2>
       </ContactSection>
 
