@@ -364,7 +364,7 @@ const Info = styled.div`
   }
 `;
 
-const QuickCamera = () => {
+const QuranJourney = () => {
   const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
 
   return (
@@ -399,33 +399,30 @@ const QuickCamera = () => {
       <HeaderSection>
         <HeaderRoleSection>
           <HeaderSubSection>
-            <H1>Quick</H1>
-            <H1>Camera</H1>
+            <H1>Quran</H1>
+            <H1>Journey</H1>
           </HeaderSubSection>
         </HeaderRoleSection>
         <Info>
           <MainTextDiv>
             <MainText>
-              A sleek and intuitive interface that transforms the camera rental
-              experience
+              A web app that transforms Quranic study into an intuitive,
+              organized experience, making every Surah easy to access and
+              explore.
             </MainText>
           </MainTextDiv>
 
           <Tags>
-            <Label>Visual Identity</Label>
             <Label>UI/UX Design</Label>
+            <Label>Frontend Dev</Label>
           </Tags>
         </Info>
       </HeaderSection>
 
       <ImagesDiv>
-        <Image src={`${assetPrefix}/quick1.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/quick2.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/quick3.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/quick4.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/quick5.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/quick6.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/quick7.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/quranjourney1.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/quranjourney2.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/quranjourney3.svg`} alt="Arrow Top Right" />
       </ImagesDiv>
       <section id="contact" />
       <ContactSection>
@@ -457,4 +454,4 @@ const QuickCamera = () => {
   );
 };
 
-export default QuickCamera;
+export default QuranJourney;

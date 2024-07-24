@@ -718,8 +718,8 @@ export default function Home() {
                 </ProjectNameDiv>
                 <ProjectBlurbDiv>
                   <MainText>
-                    I combine the world of design, tech, and immersion to create
-                    seamless immersive digital experiences
+                    A sleek and intuitive interface that transforms the camera
+                    rental experience
                   </MainText>
                 </ProjectBlurbDiv>
               </ProjectInfoDivLeft>
@@ -756,8 +756,9 @@ export default function Home() {
                 </ProjectNameDiv>
                 <ProjectBlurbDiv>
                   <MainText>
-                    I combine the world of design, tech, and immersion to create
-                    seamless immersive digital experiences
+                    A platform designed to enhance university networking,
+                    simplifying connections and interactions for a more
+                    connected campus experience.
                   </MainText>
                 </ProjectBlurbDiv>
               </ProjectInfoDivLeft>
@@ -770,42 +771,45 @@ export default function Home() {
           </Project>
         </Link>
 
-        <Project>
-          <ThumbnailQC>
-            <ThumbnailImageQJ
-              src={`${assetPrefix}/quranjourney_thumbnail.svg`}
-              alt="Arrow Top Right"
-            />
-          </ThumbnailQC>
-          <ProjectInfoDiv>
-            <ProjectInfoDivLeft>
-              <ProjectNameDiv>
-                <ProjectName>Quran Journey</ProjectName>
-                <Image
-                  className={styles.logo}
-                  src={`${assetPrefix}/arrow-top-right.svg`}
-                  alt="Arrow Top Right"
-                  width={20}
-                  height={20}
-                  priority
-                />
-              </ProjectNameDiv>
-              <ProjectBlurbDiv>
-                <MainText>
-                  I combine the world of design, tech, and immersion to create
-                  seamless immersive digital experiences
-                </MainText>
-              </ProjectBlurbDiv>
-            </ProjectInfoDivLeft>
-            <ProjectInfoDivRight>
-              <Tags>
-                <Label>Visual Identity</Label>
-                <Label>UI/UX Design</Label>
-                <Label>Frontend Dev</Label>
-              </Tags>
-            </ProjectInfoDivRight>
-          </ProjectInfoDiv>
-        </Project>
+        <Link href="/QuranJourney">
+          <Project>
+            <ThumbnailQC>
+              <ThumbnailImageQJ
+                src={`${assetPrefix}/quranjourney_thumbnail.svg`}
+                alt="Arrow Top Right"
+              />
+            </ThumbnailQC>
+            <ProjectInfoDiv>
+              <ProjectInfoDivLeft>
+                <ProjectNameDiv>
+                  <ProjectName>Quran Journey</ProjectName>
+                  <Image
+                    className={styles.logo}
+                    src={`${assetPrefix}/arrow-top-right.svg`}
+                    alt="Arrow Top Right"
+                    width={20}
+                    height={20}
+                    priority
+                  />
+                </ProjectNameDiv>
+                <ProjectBlurbDiv>
+                  <MainText>
+                    A web app that transforms Quranic study into an intuitive,
+                    organized experience, making every Surah easy to access and
+                    explore.
+                  </MainText>
+                </ProjectBlurbDiv>
+              </ProjectInfoDivLeft>
+              <ProjectInfoDivRight>
+                <Tags>
+                  <Label>Visual Identity</Label>
+                  <Label>UI/UX Design</Label>
+                  <Label>Frontend Dev</Label>
+                </Tags>
+              </ProjectInfoDivRight>
+            </ProjectInfoDiv>
+          </Project>
+        </Link>
       </ProjectSection>
 
       <a

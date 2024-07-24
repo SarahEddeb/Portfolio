@@ -180,7 +180,7 @@
     height: 300px;
   }
 
-  .description {
+  /* .description {
     font-size: 0.8rem;
   }
 
@@ -224,7 +224,7 @@
       rgb(var(--background-end-rgb)) 40%
     );
     z-index: 1;
-  }
+  } */
 }
 
 /* Tablet and Smaller Desktop */

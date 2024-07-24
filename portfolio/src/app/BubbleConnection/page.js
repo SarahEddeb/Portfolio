@@ -226,9 +226,7 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const Image2 = styled.img`
-`;
-
+const Image2 = styled.img``;
 
 const Footer = styled.div`
   display: flex;
@@ -408,8 +406,9 @@ const BubbleConnection = () => {
         <Info>
           <MainTextDiv>
             <MainText>
-              I combine the world of design, tech, and immersion to create
-              seamless immersive digital experiences
+              A platform designed to enhance university networking, simplifying
+              connections and interactions for a more connected campus
+              experience.
             </MainText>
           </MainTextDiv>
 
@@ -434,17 +433,17 @@ const BubbleConnection = () => {
 
       <Footer>
         <Link href="/" passHref>
-        <LogoDivSmall>
-          <Image2
-            className={styles.logo}
-            src={`${assetPrefix}/saraheddeb.svg`}
-            alt="Sarah Eddeb Logo"
-            width={26}
-            height={26}
-            priority
-          />
-          <LogoSmall>Sarah Eddeb | 2024 ©</LogoSmall>
-        </LogoDivSmall>
+          <LogoDivSmall>
+            <Image2
+              className={styles.logo}
+              src={`${assetPrefix}/saraheddeb.svg`}
+              alt="Sarah Eddeb Logo"
+              width={26}
+              height={26}
+              priority
+            />
+            <LogoSmall>Sarah Eddeb | 2024 ©</LogoSmall>
+          </LogoDivSmall>
         </Link>
         <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
           <FooterLinks>saraheddeb@gmail.com</FooterLinks>
