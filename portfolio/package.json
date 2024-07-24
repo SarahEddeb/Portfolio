@@ -9,8 +9,8 @@
     "start": "next start",
     "export": "next export",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out --nojekyll --CNAME https://saraheddeb.github.io/Portfolio/"
+    "predeploy": "npm run build && npm run export",
+    "deploy": "gh-pages -d out --nojekyll"
   },
   "dependencies": {
     "next": "14.2.5",
