@@ -4,7 +4,6 @@ import Image from "next/image";
 import styles from "../app/page.module.css";
 import styled from "styled-components";
 
-
 const NavBar = styled.div`
   display: flex;
   width: 100%;
@@ -358,6 +357,14 @@ const GithubRotate = styled.div`
   height: 400px;
 
   cursor: pointer;
+    transition: all 0.3s ease;
+
+
+  &:hover {
+    // transform: scale(1.05); /* Slightly enlarge the image */
+    transform: rotate(-30deg);
+
+  }
 `;
 
 const Footer = styled.div`
@@ -430,19 +437,53 @@ const ProjectInfoDiv = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
 `;
 
 const ProjectInfoDivLeft = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 30%;
+  width: 50%;
+
+  @media (max-width: 1200px) {
+    width: 60%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const ProjectBlurbDiv = styled.div`
+  width: 70%;
+
+  @media (max-width: 1200px) {
+    width: 80%;
+  }
+
+  @media (max-width: 992px) {
+    width: 85%;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const ProjectInfoDivRight = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Tags = styled.div`
@@ -511,10 +552,100 @@ const Thumbnail = styled.div`
   background-color: blue;
   margin-top: 2rem;
   margin-bottom: 2rem;
+
+  border-radius: 10px;
+  overflow: hidden;
+`;
+
+const ThumbnailQC = styled.div`
+  width: 100%;
+  height: 362px;
+  background-color: #0063f7;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+`;
+
+const ThumbnailImage = styled.img`
+  height: 70%;
+  object-fit: contain;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 1200px) {
+    height: 60%;
+  }
+  @media (max-width: 992px) {
+    height: 55%;
+  }
+
+  @media (max-width: 768px) {
+    height: 35%;
+  }
+
+  &:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+  }
+`;
+
+const ThumbnailImageBubble = styled.img`
+  width: 100%
+  object-fit: contain;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 1200px) {
+    height: 100%;
+    min-width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+  }
+`;
+
+const ThumbnailImageQJ = styled.img`
+  width: 120%;
+  height: auto;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 1200px) {
+    width: 145%;
+    height: auto;
+  }
+
+  @media (max-width: 562px) {
+    height: 100%;
+    width: auto;
+  }
+
+  &:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+  }
+`;
+
+const MainTextDiv = styled.div`
+  width: 30%;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 1200px) {
+    width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 export default function Home() {
-  const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || '';
+  const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
 
   return (
     <main className={styles.main}>
@@ -548,16 +679,23 @@ export default function Home() {
           </HeaderSubSection>
           <H1>Frontend Developer</H1>
         </HeaderRoleSection>
-        <MainText>
-          I combine the world of design and tech to create seamless digital
-          experiences
-        </MainText>
+        <MainTextDiv>
+          <MainText>
+            I combine the world of design and tech to create seamless digital
+            experiences
+          </MainText>
+        </MainTextDiv>
       </HeaderSection>
 
       <ProjectSection>
         <H4>WORK</H4>
         <Project>
-          <Thumbnail></Thumbnail>
+          <ThumbnailQC>
+            <ThumbnailImage
+              src={`${assetPrefix}/quickcamera_thumbnail.svg`}
+              alt="Arrow Top Right"
+            />
+          </ThumbnailQC>
           <ProjectInfoDiv>
             <ProjectInfoDivLeft>
               <ProjectNameDiv>
@@ -571,10 +709,12 @@ export default function Home() {
                   priority
                 />
               </ProjectNameDiv>
-              <MainText>
-                I combine the world of design, tech, and immersion to create
-                seamless immersive digital experiences
-              </MainText>
+              <ProjectBlurbDiv>
+                <MainText>
+                  I combine the world of design, tech, and immersion to create
+                  seamless immersive digital experiences
+                </MainText>
+              </ProjectBlurbDiv>
             </ProjectInfoDivLeft>
             <ProjectInfoDivRight>
               <Tags>
@@ -586,7 +726,12 @@ export default function Home() {
         </Project>
 
         <Project>
-          <Thumbnail></Thumbnail>
+          <Thumbnail>
+            <ThumbnailImageBubble
+              src={`${assetPrefix}/bubble_thumbnail.svg`}
+              alt="Arrow Top Right"
+            />
+          </Thumbnail>
           <ProjectInfoDiv>
             <ProjectInfoDivLeft>
               <ProjectNameDiv>
@@ -600,10 +745,12 @@ export default function Home() {
                   priority
                 />
               </ProjectNameDiv>
-              <MainText>
-                I combine the world of design, tech, and immersion to create
-                seamless immersive digital experiences
-              </MainText>
+              <ProjectBlurbDiv>
+                <MainText>
+                  I combine the world of design, tech, and immersion to create
+                  seamless immersive digital experiences
+                </MainText>
+              </ProjectBlurbDiv>
             </ProjectInfoDivLeft>
             <ProjectInfoDivRight>
               <Tags>
@@ -614,7 +761,12 @@ export default function Home() {
         </Project>
 
         <Project>
-          <Thumbnail></Thumbnail>
+          <ThumbnailQC>
+            <ThumbnailImageQJ
+              src={`${assetPrefix}/quranjourney_thumbnail.svg`}
+              alt="Arrow Top Right"
+            />
+          </ThumbnailQC>
           <ProjectInfoDiv>
             <ProjectInfoDivLeft>
               <ProjectNameDiv>
@@ -628,10 +780,12 @@ export default function Home() {
                   priority
                 />
               </ProjectNameDiv>
-              <MainText>
-                I combine the world of design, tech, and immersion to create
-                seamless immersive digital experiences
-              </MainText>
+              <ProjectBlurbDiv>
+                <MainText>
+                  I combine the world of design, tech, and immersion to create
+                  seamless immersive digital experiences
+                </MainText>
+              </ProjectBlurbDiv>
             </ProjectInfoDivLeft>
             <ProjectInfoDivRight>
               <Tags>
