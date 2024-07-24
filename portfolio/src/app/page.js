@@ -565,7 +565,7 @@ export default function Home() {
                 <ProjectName>Quick Camera</ProjectName>
                 <Image
                   className={styles.logo}
-                  src="/arrow-top-right.svg"
+                  src={`${assetPrefix}/arrow-top-right.svg`}
                   alt="Arrow Top Right"
                   width={20}
                   height={20}
@@ -594,7 +594,7 @@ export default function Home() {
                 <ProjectName>Bubble Connection App</ProjectName>
                 <Image
                   className={styles.logo}
-                  src="/arrow-top-right.svg"
+                  src={`${assetPrefix}/arrow-top-right.svg`}
                   alt="Arrow Top Right"
                   width={20}
                   height={20}
@@ -622,7 +622,7 @@ export default function Home() {
                 <ProjectName>Quran Journey</ProjectName>
                 <Image
                   className={styles.logo}
-                  src="/arrow-top-right.svg"
+                  src={`${assetPrefix}/arrow-top-right.svg`}
                   alt="Arrow Top Right"
                   width={20}
                   height={20}
@@ -655,7 +655,7 @@ export default function Home() {
         <GithubRotate>
           <Image
             className={styles.logo}
-            src="/github.svg"
+            src={`${assetPrefix}/github.svg`}
             alt="Github Logo"
             layout="intrinsic"
             width={400}
@@ -706,7 +706,7 @@ export default function Home() {
         <LogoDivSmall>
           <Image
             className={styles.logo}
-            src="/saraheddeb.svg"
+            src={`${assetPrefix}/saraheddeb.svg`}
             alt="Sarah Eddeb Logo"
             width={26}
             height={26}
