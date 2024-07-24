@@ -27,6 +27,14 @@ const Logo = styled.a`
   line-height: normal;
   white-space: nowrap;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
 `;
 
 const NavLinksDiv = styled.div`
@@ -44,6 +52,14 @@ const NavLinks = styled.a`
   line-height: normal;
 
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
 `;
 
 const H1 = styled.h1`
@@ -53,6 +69,28 @@ const H1 = styled.h1`
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 1200px) {
+    font-size: 80px;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 70px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 45px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 35px;
+  }
 `;
 
 const H2 = styled.h2`
@@ -62,6 +100,16 @@ const H2 = styled.h2`
   font-weight: 400;
   letter-spacing: 0.56px;
   line-height: normal;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
 
 const H3 = styled.h3`
@@ -71,6 +119,16 @@ const H3 = styled.h3`
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 40px;
+  }
 `;
 
 const H4 = styled.h4`
@@ -80,6 +138,16 @@ const H4 = styled.h4`
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
 `;
 
 const HeaderSection = styled.div`
@@ -89,6 +157,18 @@ const HeaderSection = styled.div`
   width: 100%;
   margin-top: 10rem;
   margin-bottom: 15rem;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 3rem;
+    margin-bottom: 7rem;
+  }
 `;
 
 const MainText = styled.p`
@@ -98,6 +178,18 @@ const MainText = styled.p`
   font-weight: 400;
   letter-spacing: 0.8px;
   line-height: 24px;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 `;
 
 const BodyText = styled.p`
@@ -107,6 +199,18 @@ const BodyText = styled.p`
   font-weight: 400;
   letter-spacing: 0.54px;
   line-height: 35px;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    line-height: 28px;
+  }
 `;
 
 const HeaderSubSection = styled.div`
@@ -116,12 +220,32 @@ const HeaderSubSection = styled.div`
   justify-content: space-between;
 `;
 
+const HeaderRoleSection = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  gap: 5px;
+`;
+
 const AboutSection = styled.div`
   display: flex;
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 15rem;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 10rem;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 7rem;
+  }
 `;
 const AboutSectionLeft = styled.div`
   display: flex;
@@ -133,6 +257,27 @@ const AboutSectionRight = styled.div`
   display: flex;
   flex-direction: column;
   width: 60%;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 1200px) {
+    width: 50%;
+  }
+
+  @media (max-width: 992px) {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 1rem;
+    width: 100%;
+  }
 `;
 
 const AboutFacts = styled.div`
@@ -153,6 +298,18 @@ const ContactSection = styled.div`
   align-items: center;
   margin-bottom: 15rem;
   gap: 10px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10rem;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 7rem;
+  }
 `;
 
 const DevCreationsSection = styled.div`
@@ -161,20 +318,45 @@ const DevCreationsSection = styled.div`
   align-items: center;
   gap: 100px;
   margin-bottom: 15rem;
+
+  @media (max-width: 1200px) {
+    gap: 50px;
+  }
+  @media (max-width: 992px) {
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 10px;
+  }
 `;
 
 const DevCreations = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  cursor: pointer;
 `;
 
 const DevCreationsSubHeader = styled.div`
   padding-left: 10%;
+
+  @media (max-width: 1200px) {
+    padding-left: 5px;
+  }
 `;
 
 const GithubRotate = styled.div`
   transform: rotate(-10deg);
+  width: 400px;
+  height: 400px;
+
+  cursor: pointer;
 `;
 
 const Footer = styled.div`
@@ -182,6 +364,11 @@ const Footer = styled.div`
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
+  transition: all 0.3s ease;
+
+  @media (max-width: 480px) {
+    margin-bottom: 10rem;
+  }
 `;
 
 const LogoDivSmall = styled.div`
@@ -198,8 +385,17 @@ const LogoSmall = styled.a`
   font-weight: 400;
   letter-spacing: 0.48px;
   line-height: normal;
-  white-space: nowrap;
   cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
 `;
 
 const FooterLinks = styled.a`
@@ -211,10 +407,20 @@ const FooterLinks = styled.a`
   line-height: normal;
 
   cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
 `;
 
 const ProjectSection = styled.div`
-  margin-bottom: 15rem;
+  margin-bottom: 7rem;
   width: 100%;
 `;
 
@@ -254,6 +460,22 @@ const Label = styled.p`
   padding: 7px 10px;
   background-color: blue;
   border-radius: 3px;
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+`;
+
+const ProjectNameDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
 `;
 
 const ProjectName = styled.h4`
@@ -263,6 +485,23 @@ const ProjectName = styled.h4`
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
+
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
+`;
+
+const Project = styled.div`
+  width: 100%;
+  margin-bottom: 5rem;
+
+  cursor: pointer;
 `;
 
 const Thumbnail = styled.div`
@@ -299,11 +538,13 @@ export default function Home() {
 
       <HeaderSection>
         <H2>I'm Sarah Eddeb</H2>
-        <HeaderSubSection>
-          <H1>UI/UX Designer</H1>
-          <H1>&</H1>
-        </HeaderSubSection>
-        <H1>Frontend Developer</H1>
+        <HeaderRoleSection>
+          <HeaderSubSection>
+            <H1>UI/UX Designer</H1>
+            <H1>&</H1>
+          </HeaderSubSection>
+          <H1>Frontend Developer</H1>
+        </HeaderRoleSection>
         <MainText>
           I combine the world of design and tech to create seamless digital
           experiences
@@ -312,44 +553,107 @@ export default function Home() {
 
       <ProjectSection>
         <H4>WORK</H4>
-        <Thumbnail></Thumbnail>
-        <ProjectInfoDiv>
-          <ProjectInfoDivLeft>
-            <ProjectName>Quick Camera</ProjectName>
-            <Image
-              className={styles.logo}
-              src="/arrow-top-right.svg"
-              alt="Arrow Top Right"
-              width={20}
-              height={20}
-              priority
-            />
-            <MainText>
-              I combine the world of design, tech, and immersion to create
-              seamless immersive digital experiences
-            </MainText>
-          </ProjectInfoDivLeft>
-          <ProjectInfoDivRight>
-            <Tags>
-              <Label>Visual Identity</Label>
-              <Label>UI/UX Design</Label>
-            </Tags>
-          </ProjectInfoDivRight>
-        </ProjectInfoDiv>
+        <Project>
+          <Thumbnail></Thumbnail>
+          <ProjectInfoDiv>
+            <ProjectInfoDivLeft>
+              <ProjectNameDiv>
+                <ProjectName>Quick Camera</ProjectName>
+                <Image
+                  className={styles.logo}
+                  src="/arrow-top-right.svg"
+                  alt="Arrow Top Right"
+                  width={20}
+                  height={20}
+                  priority
+                />
+              </ProjectNameDiv>
+              <MainText>
+                I combine the world of design, tech, and immersion to create
+                seamless immersive digital experiences
+              </MainText>
+            </ProjectInfoDivLeft>
+            <ProjectInfoDivRight>
+              <Tags>
+                <Label>Visual Identity</Label>
+                <Label>UI/UX Design</Label>
+              </Tags>
+            </ProjectInfoDivRight>
+          </ProjectInfoDiv>
+        </Project>
+
+        <Project>
+          <Thumbnail></Thumbnail>
+          <ProjectInfoDiv>
+            <ProjectInfoDivLeft>
+              <ProjectNameDiv>
+                <ProjectName>Bubble Connection App</ProjectName>
+                <Image
+                  className={styles.logo}
+                  src="/arrow-top-right.svg"
+                  alt="Arrow Top Right"
+                  width={20}
+                  height={20}
+                  priority
+                />
+              </ProjectNameDiv>
+              <MainText>
+                I combine the world of design, tech, and immersion to create
+                seamless immersive digital experiences
+              </MainText>
+            </ProjectInfoDivLeft>
+            <ProjectInfoDivRight>
+              <Tags>
+                <Label>UI/UX Design</Label>
+              </Tags>
+            </ProjectInfoDivRight>
+          </ProjectInfoDiv>
+        </Project>
+
+        <Project>
+          <Thumbnail></Thumbnail>
+          <ProjectInfoDiv>
+            <ProjectInfoDivLeft>
+              <ProjectNameDiv>
+                <ProjectName>Quran Journey</ProjectName>
+                <Image
+                  className={styles.logo}
+                  src="/arrow-top-right.svg"
+                  alt="Arrow Top Right"
+                  width={20}
+                  height={20}
+                  priority
+                />
+              </ProjectNameDiv>
+              <MainText>
+                I combine the world of design, tech, and immersion to create
+                seamless immersive digital experiences
+              </MainText>
+            </ProjectInfoDivLeft>
+            <ProjectInfoDivRight>
+              <Tags>
+                <Label>Visual Identity</Label>
+                <Label>UI/UX Design</Label>
+                <Label>Frontend Dev</Label>
+              </Tags>
+            </ProjectInfoDivRight>
+          </ProjectInfoDiv>
+        </Project>
       </ProjectSection>
 
       <DevCreationsSection>
         <DevCreations>
           <DevCreationsSubHeader>
-            <H2>For Dev Creations</H2>
+            <H2>For My Dev Creations</H2>
           </DevCreationsSubHeader>
-          <H3>Checkout my Github</H3>
+          <H3>Check Out My Github</H3>
         </DevCreations>
         <GithubRotate>
           <Image
             className={styles.logo}
             src="/github.svg"
             alt="Github Logo"
+            layout="intrinsic"
             width={400}
             height={400}
             priority
