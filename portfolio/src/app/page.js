@@ -3,6 +3,7 @@
 import Image from "next/image";
 import styles from "../app/page.module.css";
 import styled from "styled-components";
+import Link from "next/link";
 
 const NavBar = styled.div`
   display: flex;
@@ -694,76 +695,80 @@ export default function Home() {
       <section id="work" />
       <ProjectSection>
         <H4>WORK</H4>
-        <Project>
-          <ThumbnailQC>
-            <ThumbnailImage
-              src={`${assetPrefix}/quickcamera_thumbnail.svg`}
-              alt="Arrow Top Right"
-            />
-          </ThumbnailQC>
-          <ProjectInfoDiv>
-            <ProjectInfoDivLeft>
-              <ProjectNameDiv>
-                <ProjectName>Quick Camera</ProjectName>
-                <Image
-                  className={styles.logo}
-                  src={`${assetPrefix}/arrow-top-right.svg`}
-                  alt="Arrow Top Right"
-                  width={20}
-                  height={20}
-                  priority
-                />
-              </ProjectNameDiv>
-              <ProjectBlurbDiv>
-                <MainText>
-                  I combine the world of design, tech, and immersion to create
-                  seamless immersive digital experiences
-                </MainText>
-              </ProjectBlurbDiv>
-            </ProjectInfoDivLeft>
-            <ProjectInfoDivRight>
-              <Tags>
-                <Label>Visual Identity</Label>
-                <Label>UI/UX Design</Label>
-              </Tags>
-            </ProjectInfoDivRight>
-          </ProjectInfoDiv>
-        </Project>
+        <Link href="/QuickCamera">
+          <Project>
+            <ThumbnailQC>
+              <ThumbnailImage
+                src={`${assetPrefix}/quickcamera_thumbnail.svg`}
+                alt="Arrow Top Right"
+              />
+            </ThumbnailQC>
+            <ProjectInfoDiv>
+              <ProjectInfoDivLeft>
+                <ProjectNameDiv>
+                  <ProjectName>Quick Camera</ProjectName>
+                  <Image
+                    className={styles.logo}
+                    src={`${assetPrefix}/arrow-top-right.svg`}
+                    alt="Arrow Top Right"
+                    width={20}
+                    height={20}
+                    priority
+                  />
+                </ProjectNameDiv>
+                <ProjectBlurbDiv>
+                  <MainText>
+                    I combine the world of design, tech, and immersion to create
+                    seamless immersive digital experiences
+                  </MainText>
+                </ProjectBlurbDiv>
+              </ProjectInfoDivLeft>
+              <ProjectInfoDivRight>
+                <Tags>
+                  <Label>Visual Identity</Label>
+                  <Label>UI/UX Design</Label>
+                </Tags>
+              </ProjectInfoDivRight>
+            </ProjectInfoDiv>
+          </Project>
+        </Link>
 
-        <Project>
-          <Thumbnail>
-            <ThumbnailImageBubble
-              src={`${assetPrefix}/bubble_thumbnail.svg`}
-              alt="Arrow Top Right"
-            />
-          </Thumbnail>
-          <ProjectInfoDiv>
-            <ProjectInfoDivLeft>
-              <ProjectNameDiv>
-                <ProjectName>Bubble Connection App</ProjectName>
-                <Image
-                  className={styles.logo}
-                  src={`${assetPrefix}/arrow-top-right.svg`}
-                  alt="Arrow Top Right"
-                  width={20}
-                  height={20}
-                  priority
-                />
-              </ProjectNameDiv>
-              <ProjectBlurbDiv>
-                <MainText>
-                  I combine the world of design, tech, and immersion to create
-                  seamless immersive digital experiences
-                </MainText>
-              </ProjectBlurbDiv>
-            </ProjectInfoDivLeft>
-            <ProjectInfoDivRight>
-              <Tags>
-                <Label>UI/UX Design</Label>
-              </Tags>
-            </ProjectInfoDivRight>
-          </ProjectInfoDiv>
-        </Project>
+        <Link href="/BubbleConnection">
+          <Project>
+            <Thumbnail>
+              <ThumbnailImageBubble
+                src={`${assetPrefix}/bubble_thumbnail.svg`}
+                alt="Arrow Top Right"
+              />
+            </Thumbnail>
+            <ProjectInfoDiv>
+              <ProjectInfoDivLeft>
+                <ProjectNameDiv>
+                  <ProjectName>Bubble Connection App</ProjectName>
+                  <Image
+                    className={styles.logo}
+                    src={`${assetPrefix}/arrow-top-right.svg`}
+                    alt="Arrow Top Right"
+                    width={20}
+                    height={20}
+                    priority
+                  />
+                </ProjectNameDiv>
+                <ProjectBlurbDiv>
+                  <MainText>
+                    I combine the world of design, tech, and immersion to create
+                    seamless immersive digital experiences
+                  </MainText>
+                </ProjectBlurbDiv>
+              </ProjectInfoDivLeft>
+              <ProjectInfoDivRight>
+                <Tags>
+                  <Label>UI/UX Design</Label>
+                </Tags>
+              </ProjectInfoDivRight>
+            </ProjectInfoDiv>
+          </Project>
+        </Link>
 
         <Project>
           <ThumbnailQC>
@@ -829,7 +834,7 @@ export default function Home() {
         </DevCreationsSection>
       </a>
 
-      <section id="about"/>
+      <section id="about" />
       <AboutSection>
         <AboutSectionLeft>
           <H4>ABOUT ME</H4>
