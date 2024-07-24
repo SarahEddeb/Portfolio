@@ -2,6 +2,7 @@
 const nextConfig = {
   basePath: process.env.NODE_ENV === "production" ? "/Portfolio" : "",
   assetPrefix: process.env.NODE_ENV === "production" ? "/Portfolio/" : "",
+  output: "export",
   env: {
     NEXT_PUBLIC_ASSET_PREFIX: process.env.NODE_ENV === "production" ? "/Portfolio" : "",
   },
