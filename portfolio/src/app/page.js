@@ -357,13 +357,11 @@ const GithubRotate = styled.div`
   height: 400px;
 
   cursor: pointer;
-    transition: all 0.3s ease;
-
+  transition: all 0.3s ease;
 
   &:hover {
     // transform: scale(1.05); /* Slightly enlarge the image */
     transform: rotate(-30deg);
-
   }
 `;
 
@@ -384,6 +382,10 @@ const LogoDivSmall = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 480px) {
+    gap: 0px;
+  }
 `;
 
 const LogoSmall = styled.a`
@@ -501,6 +503,8 @@ const Label = styled.p`
   line-height: normal;
   padding: 7px 10px;
   background-color: blue;
+  background-color: rgba(10, 190, 255, 0.25);
+
   border-radius: 3px;
   transition: all 0.3s ease;
 
@@ -663,9 +667,9 @@ export default function Home() {
             <Logo>Sarah Eddeb</Logo>
           </LogoDiv>
           <NavLinksDiv>
-            <NavLinks>Work</NavLinks>
-            <NavLinks>About</NavLinks>
-            <NavLinks>Contact</NavLinks>
+            <NavLinks href="#work">Work</NavLinks>
+            <NavLinks href="#about">About</NavLinks>
+            <NavLinks href="#contact">Contact</NavLinks>
           </NavLinksDiv>
         </NavBar>
       </div>
@@ -687,6 +691,7 @@ export default function Home() {
         </MainTextDiv>
       </HeaderSection>
 
+      <section id="work" />
       <ProjectSection>
         <H4>WORK</H4>
         <Project>
@@ -798,26 +803,33 @@ export default function Home() {
         </Project>
       </ProjectSection>
 
-      <DevCreationsSection>
-        <DevCreations>
-          <DevCreationsSubHeader>
-            <H2>For My Dev Creations</H2>
-          </DevCreationsSubHeader>
-          <H3>Check Out My Github</H3>
-        </DevCreations>
-        <GithubRotate>
-          <Image
-            className={styles.logo}
-            src={`${assetPrefix}/github.svg`}
-            alt="Github Logo"
-            layout="intrinsic"
-            width={400}
-            height={400}
-            priority
-          />
-        </GithubRotate>
-      </DevCreationsSection>
+      <a
+        href="https://github.com/SarahEddeb"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <DevCreationsSection>
+          <DevCreations>
+            <DevCreationsSubHeader>
+              <H2>For My Dev Creations</H2>
+            </DevCreationsSubHeader>
+            <H3>Check Out My Github</H3>
+          </DevCreations>
+          <GithubRotate>
+            <Image
+              className={styles.logo}
+              src={`${assetPrefix}/github.svg`}
+              alt="Github Logo"
+              layout="intrinsic"
+              width={400}
+              height={400}
+              priority
+            />
+          </GithubRotate>
+        </DevCreationsSection>
+      </a>
 
+      <section id="about"/>
       <AboutSection>
         <AboutSectionLeft>
           <H4>ABOUT ME</H4>
@@ -850,9 +862,12 @@ export default function Home() {
         </AboutSectionRight>
       </AboutSection>
 
+      <section id="contact" />
       <ContactSection>
         <H3>Let’s Connect</H3>
-        <H2>saraheddeb@gmail.com</H2>
+        <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
+          <H2>saraheddeb@gmail.com</H2>
+        </a>
       </ContactSection>
 
       <Footer>
@@ -867,7 +882,9 @@ export default function Home() {
           />
           <LogoSmall>Sarah Eddeb | 2024 ©</LogoSmall>
         </LogoDivSmall>
-        <FooterLinks>saraheddeb@gmail.com</FooterLinks>
+        <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
+          <FooterLinks>saraheddeb@gmail.com</FooterLinks>
+        </a>
       </Footer>
     </main>
   );
