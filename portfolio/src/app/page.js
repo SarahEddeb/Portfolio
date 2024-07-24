@@ -367,8 +367,8 @@ const Footer = styled.div`
   justify-content: space-between;
   transition: all 0.3s ease;
 
-  @media (max-width: 480px) {
-    margin-bottom: 10rem;
+  @media (max-width: 700px) {
+    margin-bottom: 5rem;
   }
 `;
 
@@ -529,7 +529,6 @@ export default function Home() {
               height={38}
               priority
             />
-            {console.log(assetPrefix)}
             <Logo>Sarah Eddeb</Logo>
           </LogoDiv>
           <NavLinksDiv>
