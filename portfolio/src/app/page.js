@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar";
 
 const H1 = styled.h1`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 96px;
   font-weight: 400;
   letter-spacing: 0;
@@ -39,7 +39,7 @@ const H1 = styled.h1`
 
 const H2 = styled.h2`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 28px;
   font-weight: 400;
   letter-spacing: 0.56px;
@@ -58,7 +58,7 @@ const H2 = styled.h2`
 
 const H3 = styled.h3`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 78px;
   font-weight: 400;
   letter-spacing: 0;
@@ -77,7 +77,7 @@ const H3 = styled.h3`
 
 const H4 = styled.h4`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0;
@@ -117,7 +117,7 @@ const HeaderSection = styled.div`
 
 const MainText = styled.p`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.8px;
@@ -138,7 +138,7 @@ const MainText = styled.p`
 
 const BodyText = styled.p`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.54px;
@@ -338,7 +338,7 @@ const LogoDivSmall = styled.div`
 
 const LogoSmall = styled.a`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.48px;
@@ -358,7 +358,7 @@ const LogoSmall = styled.a`
 
 const FooterLinks = styled.a`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0;
@@ -445,7 +445,7 @@ const Tags = styled.div`
 
 const Label = styled.p`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0;
@@ -475,7 +475,7 @@ const ProjectNameDiv = styled.div`
 
 const ProjectName = styled.h4`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 36px;
   font-weight: 400;
   letter-spacing: 0;

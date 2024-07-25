@@ -9,7 +9,7 @@ import NavBar from "../components/NavBar";
 
 const H2 = styled.h2`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 28px;
   font-weight: 400;
   letter-spacing: 0.56px;
@@ -28,7 +28,7 @@ const H2 = styled.h2`
 
 const H3 = styled.h3`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 78px;
   font-weight: 400;
   letter-spacing: 0;
@@ -47,7 +47,7 @@ const H3 = styled.h3`
 
 const H4 = styled.h4`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0;
@@ -96,7 +96,7 @@ const LogoDivSmall = styled.div`
 
 const LogoSmall = styled.a`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.48px;
@@ -116,7 +116,7 @@ const LogoSmall = styled.a`
 
 const FooterLinks = styled.a`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0;
@@ -157,7 +157,7 @@ const ContactSection = styled.div`
 
 const BodyText = styled.p`
   color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
+  font-family: "Nohemi", Helvetica;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.54px;
