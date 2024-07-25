@@ -170,8 +170,6 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const Image2 = styled.img``;
-
 
 const ContactSection = styled.div`
   display: flex;
@@ -287,19 +285,19 @@ const BubbleConnection = () => {
         <Image
           src={`${assetPrefix}/bubble1.png`}
           alt="Arrow Top Right"
-          quality={100}
-          unoptimized={true}
+          // quality={100}
+          // unoptimized={true}
         />
         <Image
           src={`${assetPrefix}/bubble2.svg`}
           alt="Arrow Top Right"
-          quality={100}
+          // quality={100}
         />
         <Image
           src={`${assetPrefix}/bubble3.png`}
           alt="Arrow Top Right"
-          quality={100}
-          unoptimized={true}
+          // quality={100}
+          // unoptimized={true}
         />
       </ImagesDiv>
       <section id="contact" />

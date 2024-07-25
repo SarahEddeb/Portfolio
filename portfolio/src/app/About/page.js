@@ -64,13 +64,6 @@ const H4 = styled.h4`
   }
 `;
 
-
-const Image = styled.img`
-  width: 100%;
-`;
-
-const Image2 = styled.img``;
-
 const ContactSection = styled.div`
   display: flex;
   flex-direction: column;
