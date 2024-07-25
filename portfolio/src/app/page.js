@@ -17,6 +17,10 @@ const LogoDiv = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 480px) {
+    gap: 6px;
+  }
 `;
 
 const Logo = styled.a`
@@ -34,7 +38,7 @@ const Logo = styled.a`
   }
 
   @media (max-width: 480px) {
-    font-size: 18px;
+    display: none !important;
   }
 `;
 
@@ -162,13 +166,13 @@ const HeaderSection = styled.div`
   transition: all 0.3s ease;
 
   @media (max-width: 768px) {
-    margin-top: 5rem;
-    margin-bottom: 10rem;
+    margin-top: 10rem;
+    margin-bottom: 13rem;
   }
 
   @media (max-width: 480px) {
-    margin-top: 3rem;
-    margin-bottom: 7rem;
+    margin-top: 12rem;
+    margin-bottom: 14rem;
   }
 `;
 
@@ -315,12 +319,15 @@ const ContactSection = styled.div`
 
 const DevCreationsSection = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 100px;
   margin-bottom: 15rem;
 
   @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+
     gap: 50px;
   }
   @media (max-width: 992px) {
@@ -353,16 +360,12 @@ const DevCreationsSubHeader = styled.div`
 `;
 
 const GithubRotate = styled.div`
-  transform: rotate(-10deg);
-  width: 400px;
-  height: 400px;
-
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
-    // transform: scale(1.05); /* Slightly enlarge the image */
-    transform: rotate(-30deg);
+    transform: scale(1.25); /* Slightly enlarge the image */
+    // transform: rotate(-30deg);
   }
 `;
 
@@ -374,7 +377,12 @@ const Footer = styled.div`
   transition: all 0.3s ease;
 
   @media (max-width: 700px) {
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -385,7 +393,7 @@ const LogoDivSmall = styled.div`
   gap: 20px;
 
   @media (max-width: 480px) {
-    gap: 0px;
+    gap: 10px;
   }
 `;
 
@@ -426,7 +434,8 @@ const FooterLinks = styled.a`
   }
 
   @media (max-width: 480px) {
-    font-size: 16px;
+    // font-size: 16px;
+    display: none !important;
   }
 `;
 
@@ -818,31 +827,36 @@ export default function Home() {
         </Link>
       </ProjectSection>
 
-      <a
-        href="https://github.com/SarahEddeb"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <DevCreationsSection>
-          <DevCreations>
-            <DevCreationsSubHeader>
-              <H2>For My Dev Creations</H2>
-            </DevCreationsSubHeader>
-            <H3>Check Out My Github</H3>
-          </DevCreations>
+      <ContactSection>
+        <a
+          href="https://github.com/SarahEddeb"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <GithubRotate>
             <Image
               className={styles.logo}
               src={`${assetPrefix}/github.svg`}
               alt="Github Logo"
               layout="intrinsic"
-              width={400}
-              height={400}
+              width={100}
+              height={100}
               priority
+              style={{ marginBottom: "3rem" }}
             />
           </GithubRotate>
-        </DevCreationsSection>
-      </a>
+        </a>
+        <H2>For My Dev Creations</H2>
+        <a
+          href="https://github.com/SarahEddeb"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <H3 style={{ marginBottom: "5rem", textAlign: "center" }}>
+            Check Out My Github
+          </H3>
+        </a>
+      </ContactSection>
 
       <section id="about" />
       <AboutSection>
