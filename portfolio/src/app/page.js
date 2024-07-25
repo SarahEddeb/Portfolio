@@ -633,7 +633,6 @@ export default function Home() {
                 src={`${assetPrefix}/quickcamera_thumbnail.svg`}
                 alt="Arrow Top Right"
                 quality={100}
-                unoptimized={true}
               />
             </ThumbnailQC>
             <ProjectInfoDiv>
@@ -673,7 +672,6 @@ export default function Home() {
                 src={`${assetPrefix}/bubble_thumbnail.svg`}
                 alt="Arrow Top Right"
                 quality={100}
-                unoptimized={true}
               />
             </Thumbnail>
             <ProjectInfoDiv>
@@ -713,7 +711,6 @@ export default function Home() {
                 src={`${assetPrefix}/quranjourney_thumbnail.svg`}
                 alt="Arrow Top Right"
                 quality={100}
-                unoptimized={true}
               />
             </ThumbnailQC>
             <ProjectInfoDiv>

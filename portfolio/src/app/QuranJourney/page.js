@@ -284,14 +284,10 @@ const QuranJourney = () => {
         <Image
           src={`${assetPrefix}/quranjourney1.png`}
           alt="Arrow Top Right"
-          quality={100}
-          unoptimized={true}
         />
         <Image
           src={`${assetPrefix}/quranjourney2.svg`}
           alt="Arrow Top Right"
-          quality={100}
-          unoptimized={true}
         />
         <Image
           src={`${assetPrefix}/quranjourney3.png`}

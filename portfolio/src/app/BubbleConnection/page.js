@@ -294,7 +294,6 @@ const BubbleConnection = () => {
           src={`${assetPrefix}/bubble2.svg`}
           alt="Arrow Top Right"
           quality={100}
-          unoptimized={true}
         />
         <Image
           src={`${assetPrefix}/bubble3.png`}

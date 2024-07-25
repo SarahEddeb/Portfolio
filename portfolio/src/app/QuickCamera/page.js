@@ -285,26 +285,18 @@ const QuickCamera = () => {
         <Image
           src={`${assetPrefix}/quick1.svg`}
           alt="Arrow Top Right"
-          quality={100}
-          unoptimized={true}
         />
         <Image
           src={`${assetPrefix}/quick2.svg`}
           alt="Arrow Top Right"
-          quality={100}
-          unoptimized={true}
         />
         <Image
           src={`${assetPrefix}/quick3.svg`}
           alt="Arrow Top Right"
-          quality={100}
-          unoptimized={true}
         />
         <Image
           src={`${assetPrefix}/quick4.svg`}
           alt="Arrow Top Right"
-          quality={100}
-          unoptimized={true}
         />
         <Image
           src={`${assetPrefix}/quick5.png`}
