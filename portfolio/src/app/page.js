@@ -542,6 +542,10 @@ const ThumbnailImage = styled.img`
     height: 35%;
   }
 
+  @media (max-width: 480px) {
+    height: 25%;
+  }
+
   &:hover {
     transform: scale(1.05); /* Slightly enlarge the image */
   }
@@ -570,11 +574,16 @@ const ThumbnailImageQJ = styled.img`
   transition: all 0.3s ease;
 
   @media (max-width: 1200px) {
-    width: 145%;
+    width: 155%;
     height: auto;
   }
 
   @media (max-width: 562px) {
+    height: 110%;
+    width: auto;
+  }
+
+  @media (max-width: 480px) {
     height: 100%;
     width: auto;
   }
@@ -603,7 +612,6 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      
       <NavBar />
 
       <HeaderSection>
