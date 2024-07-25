@@ -5,6 +5,7 @@ import styles from "../app/page.module.css";
 import styled from "styled-components";
 import Link from "next/link";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 const H1 = styled.h1`
   color: inherit;
@@ -308,22 +309,22 @@ const GithubRotate = styled.div`
   }
 `;
 
-const Footer = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  transition: all 0.3s ease;
+// const Footer = styled.div`
+//   display: flex;
+//   width: 100%;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   transition: all 0.3s ease;
 
-  @media (max-width: 700px) {
-    margin-bottom: 1rem;
-  }
+//   @media (max-width: 700px) {
+//     margin-bottom: 1rem;
+//   }
 
-  @media (max-width: 480px) {
-    align-items: center;
-    justify-content: center;
-  }
-`;
+//   @media (max-width: 480px) {
+//     align-items: center;
+//     justify-content: center;
+//   }
+// `;
 
 const LogoDivSmall = styled.div`
   display: flex;
@@ -820,22 +821,7 @@ export default function Home() {
         </a>
       </ContactSection>
 
-      <Footer>
-        <LogoDivSmall>
-          <Image
-            className={styles.logo}
-            src={`${assetPrefix}/saraheddeb.svg`}
-            alt="Sarah Eddeb Logo"
-            width={26}
-            height={26}
-            priority
-          />
-          <LogoSmall>Sarah Eddeb | 2024 ©</LogoSmall>
-        </LogoDivSmall>
-        <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
-          <FooterLinks>saraheddeb@gmail.com</FooterLinks>
-        </a>
-      </Footer>
+      <Footer />
     </main>
   );
 }

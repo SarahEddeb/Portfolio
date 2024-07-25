@@ -5,6 +5,7 @@ import styles from "../../app/page.module.css";
 import styled from "styled-components";
 import Link from "next/link";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 const HeaderRoleSection = styled.div`
   display: flex;
@@ -169,72 +170,6 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const Image2 = styled.img``;
-
-const Footer = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  transition: all 0.3s ease;
-
-  @media (max-width: 700px) {
-    margin-bottom: 5rem;
-  }
-`;
-
-const LogoDivSmall = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-
-  @media (max-width: 480px) {
-    gap: 0px;
-  }
-`;
-
-const LogoSmall = styled.a`
-  color: inherit;
-  font-family: "Nohemi", Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0.48px;
-  line-height: normal;
-  cursor: pointer;
-
-  transition: all 0.3s ease;
-
-  @media (max-width: 768px) {
-    font-size: 18px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 16px;
-  }
-`;
-
-const FooterLinks = styled.a`
-  color: inherit;
-  font-family: "Nohemi", Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: normal;
-
-  cursor: pointer;
-
-  transition: all 0.3s ease;
-
-  @media (max-width: 768px) {
-    font-size: 18px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 16px;
-  }
-`;
-
 const ContactSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -379,24 +314,7 @@ const QuranJourney = () => {
         </a>
       </ContactSection>
 
-      <Footer>
-        <Link href="/" passHref>
-          <LogoDivSmall>
-            <Image2
-              className={styles.logo}
-              src={`${assetPrefix}/saraheddeb.svg`}
-              alt="Sarah Eddeb Logo"
-              width={26}
-              height={26}
-              priority
-            />
-            <LogoSmall>Sarah Eddeb | 2024 ©</LogoSmall>
-          </LogoDivSmall>
-        </Link>
-        <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
-          <FooterLinks>saraheddeb@gmail.com</FooterLinks>
-        </a>
-      </Footer>
+      <Footer />
     </main>
   );
 };
