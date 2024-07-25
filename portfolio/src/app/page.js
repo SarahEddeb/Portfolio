@@ -640,8 +640,8 @@ export default function Home() {
               <ThumbnailImage
                 src={`${assetPrefix}/quickcamera_thumbnail.png`}
                 alt="Arrow Top Right"
-                quality={100}
-                unoptimized={true}
+                // quality={100}
+                // unoptimized={true}
               />
             </ThumbnailQC>
             <ProjectInfoDiv>
@@ -719,8 +719,8 @@ export default function Home() {
               <ThumbnailImageQJ
                 src={`${assetPrefix}/quranjourney_thumbnail.png`}
                 alt="Arrow Top Right"
-                quality={100}
-                unoptimized={true}
+                // quality={100}
+                // unoptimized={true}
               />
             </ThumbnailQC>
             <ProjectInfoDiv>
