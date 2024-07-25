@@ -420,9 +420,24 @@ const QuranJourney = () => {
       </HeaderSection>
 
       <ImagesDiv>
-        <Image src={`${assetPrefix}/quranjourney1.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/quranjourney2.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/quranjourney3.svg`} alt="Arrow Top Right" />
+        <Image
+          src={`${assetPrefix}/quranjourney1.svg`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
+        <Image
+          src={`${assetPrefix}/quranjourney2.svg`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
+        <Image
+          src={`${assetPrefix}/quranjourney3.svg`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
       </ImagesDiv>
       <section id="contact" />
       <ContactSection>

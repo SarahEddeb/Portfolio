@@ -419,9 +419,24 @@ const BubbleConnection = () => {
       </HeaderSection>
 
       <ImagesDiv>
-        <Image src={`${assetPrefix}/bubble1.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/bubble2.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/bubble3.svg`} alt="Arrow Top Right" />
+        <Image
+          src={`${assetPrefix}/bubble1.svg`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
+        <Image
+          src={`${assetPrefix}/bubble2.svg`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
+        <Image
+          src={`${assetPrefix}/bubble3.svg`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
       </ImagesDiv>
       <section id="contact" />
       <ContactSection>
