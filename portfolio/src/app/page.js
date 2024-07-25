@@ -680,7 +680,7 @@ export default function Home() {
               <ThumbnailImageBubble
                 src={`${assetPrefix}/bubble_thumbnail.svg`}
                 alt="Arrow Top Right"
-                quality={100}
+                // quality={100}
               />
             </Thumbnail>
             <ProjectInfoDiv>
@@ -762,16 +762,15 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GithubRotate>
+          <GithubRotate style={{ marginBottom: "3rem" }}>
             <Image
               className={styles.logo}
               src={`${assetPrefix}/github.svg`}
               alt="Github Logo"
-              layout="intrinsic"
+              // layout="intrinsic"
               width={100}
               height={100}
               priority
-              style={{ marginBottom: "3rem" }}
             />
           </GithubRotate>
         </a>
