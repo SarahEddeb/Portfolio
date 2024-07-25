@@ -420,7 +420,7 @@ const BubbleConnection = () => {
 
       <ImagesDiv>
         <Image
-          src={`${assetPrefix}/bubble1.svg`}
+          src={`${assetPrefix}/bubble1.png`}
           alt="Arrow Top Right"
           quality={100}
           unoptimized={true}
@@ -432,7 +432,7 @@ const BubbleConnection = () => {
           unoptimized={true}
         />
         <Image
-          src={`${assetPrefix}/bubble3.svg`}
+          src={`${assetPrefix}/bubble3.png`}
           alt="Arrow Top Right"
           quality={100}
           unoptimized={true}

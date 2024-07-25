@@ -427,11 +427,11 @@ const QuickCamera = () => {
           unoptimized={true}/>
         <Image src={`${assetPrefix}/quick4.svg`} alt="Arrow Top Right" quality={100}
           unoptimized={true}/>
-        <Image src={`${assetPrefix}/quick5.svg`} alt="Arrow Top Right" quality={100}
+        <Image src={`${assetPrefix}/quick5.png`} alt="Arrow Top Right" quality={100}
           unoptimized={true}/>
-        <Image src={`${assetPrefix}/quick6.svg`} alt="Arrow Top Right" quality={100}
+        <Image src={`${assetPrefix}/quick6.png`} alt="Arrow Top Right" quality={100}
           unoptimized={true}/>
-        <Image src={`${assetPrefix}/quick7.svg`} alt="Arrow Top Right" quality={100}
+        <Image src={`${assetPrefix}/quick7.png`} alt="Arrow Top Right" quality={100}
           unoptimized={true}/>
       </ImagesDiv>
       <section id="contact" />

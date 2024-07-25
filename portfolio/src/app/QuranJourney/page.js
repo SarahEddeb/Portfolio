@@ -421,7 +421,7 @@ const QuranJourney = () => {
 
       <ImagesDiv>
         <Image
-          src={`${assetPrefix}/quranjourney1.svg`}
+          src={`${assetPrefix}/quranjourney1.png`}
           alt="Arrow Top Right"
           quality={100}
           unoptimized={true}
@@ -433,7 +433,7 @@ const QuranJourney = () => {
           unoptimized={true}
         />
         <Image
-          src={`${assetPrefix}/quranjourney3.svg`}
+          src={`${assetPrefix}/quranjourney3.png`}
           alt="Arrow Top Right"
           quality={100}
           unoptimized={true}
