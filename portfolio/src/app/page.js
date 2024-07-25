@@ -678,7 +678,9 @@ export default function Home() {
           </LogoDiv>
           <NavLinksDiv>
             <NavLinks href="#work">Work</NavLinks>
-            <NavLinks href="#about">About</NavLinks>
+            <Link href="/About">
+              <NavLinks href="#about">About</NavLinks>
+            </Link>
             <NavLinks href="#contact">Contact</NavLinks>
           </NavLinksDiv>
         </NavBar>

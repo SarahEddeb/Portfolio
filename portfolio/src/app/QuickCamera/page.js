@@ -319,6 +319,14 @@ const ImagesDiv = styled.div`
   gap: 50px;
 
   margin-bottom: 15rem;
+
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 10px;
+  }
 `;
 const Label = styled.p`
   color: inherit;
@@ -388,7 +396,7 @@ const QuickCamera = () => {
             <Link href="/#work" passHref>
               <NavLinks href="#work">Work</NavLinks>
             </Link>
-            <Link href="/#about" passHref>
+            <Link href="/About">
               <NavLinks href="#about">About</NavLinks>
             </Link>
             <NavLinks href="#contact">Contact</NavLinks>
@@ -419,20 +427,48 @@ const QuickCamera = () => {
       </HeaderSection>
 
       <ImagesDiv>
-        <Image src={`${assetPrefix}/quick1.svg`} alt="Arrow Top Right" quality={100}
-          unoptimized={true}/>
-        <Image src={`${assetPrefix}/quick2.svg`} alt="Arrow Top Right" quality={100}
-          unoptimized={true}/>
-        <Image src={`${assetPrefix}/quick3.svg`} alt="Arrow Top Right" quality={100}
-          unoptimized={true}/>
-        <Image src={`${assetPrefix}/quick4.svg`} alt="Arrow Top Right" quality={100}
-          unoptimized={true}/>
-        <Image src={`${assetPrefix}/quick5.png`} alt="Arrow Top Right" quality={100}
-          unoptimized={true}/>
-        <Image src={`${assetPrefix}/quick6.png`} alt="Arrow Top Right" quality={100}
-          unoptimized={true}/>
-        <Image src={`${assetPrefix}/quick7.png`} alt="Arrow Top Right" quality={100}
-          unoptimized={true}/>
+        <Image
+          src={`${assetPrefix}/quick1.svg`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
+        <Image
+          src={`${assetPrefix}/quick2.svg`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
+        <Image
+          src={`${assetPrefix}/quick3.svg`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
+        <Image
+          src={`${assetPrefix}/quick4.svg`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
+        <Image
+          src={`${assetPrefix}/quick5.png`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
+        <Image
+          src={`${assetPrefix}/quick6.png`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
+        <Image
+          src={`${assetPrefix}/quick7.png`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
       </ImagesDiv>
       <section id="contact" />
       <ContactSection>

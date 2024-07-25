@@ -319,7 +319,16 @@ const ImagesDiv = styled.div`
   gap: 50px;
 
   margin-bottom: 15rem;
+
+   @media (max-width: 768px) {
+    gap: 15px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 10px;
+  }
 `;
+
 const Label = styled.p`
   color: inherit;
   font-family: "Nohemi-Regular", Helvetica;
@@ -388,7 +397,7 @@ const BubbleConnection = () => {
             <Link href="/#work" passHref>
               <NavLinks href="#work">Work</NavLinks>
             </Link>
-            <Link href="/#about" passHref>
+            <Link href="/About">
               <NavLinks href="#about">About</NavLinks>
             </Link>
             <NavLinks href="#contact">Contact</NavLinks>
