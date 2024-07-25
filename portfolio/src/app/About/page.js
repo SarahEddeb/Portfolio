@@ -4,103 +4,8 @@ import React from "react";
 import styles from "../../app/page.module.css";
 import styled from "styled-components";
 import Link from "next/link";
+import NavBar from "../components/NavBar";
 
-const NavBar = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const LogoDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-`;
-
-const Logo = styled.a`
-  color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  letter-spacing: 0.48px;
-  line-height: normal;
-  white-space: nowrap;
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 18px;
-  }
-`;
-
-const NavLinksDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-`;
-
-const NavLinks = styled.a`
-  color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: normal;
-
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    font-size: 18px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 16px;
-  }
-`;
-
-const HeaderRoleSection = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-
-  gap: 5px;
-`;
-
-const H1 = styled.h1`
-  color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
-  font-size: 96px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: normal;
-
-  transition: all 0.3s ease;
-
-  @media (max-width: 1200px) {
-    font-size: 80px;
-  }
-
-  @media (max-width: 992px) {
-    font-size: 70px;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 50px;
-  }
-
-  @media (max-width: 576px) {
-    font-size: 45px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 35px;
-  }
-`;
 
 const H2 = styled.h2`
   color: inherit;
@@ -159,68 +64,6 @@ const H4 = styled.h4`
   }
 `;
 
-const HeaderSubSection = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const HeaderSection = styled.div`
-  display: inherit;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  margin-top: 10rem;
-  margin-bottom: 7rem;
-
-  transition: all 0.3s ease;
-
-  @media (max-width: 768px) {
-    margin-top: 5rem;
-    margin-bottom: 10rem;
-  }
-
-  @media (max-width: 480px) {
-    margin-top: 3rem;
-    margin-bottom: 7rem;
-  }
-`;
-
-const MainTextDiv = styled.div`
-  width: 30%;
-
-  transition: all 0.3s ease;
-
-  @media (max-width: 1200px) {
-    width: 50%;
-  }
-
-  @media (max-width: 768px) {
-    width: 80%;
-  }
-`;
-
-const MainText = styled.p`
-  color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0.8px;
-  line-height: 24px;
-
-  transition: all 0.3s ease;
-
-  @media (max-width: 768px) {
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 16px;
-    line-height: 20px;
-  }
-`;
 
 const Image = styled.img`
   width: 100%;
@@ -347,10 +190,14 @@ const AboutSection = styled.div`
   @media (max-width: 992px) {
     flex-direction: column;
     gap: 20px;
+      margin-top: 7rem;
+
     margin-bottom: 10rem;
   }
 
   @media (max-width: 480px) {
+    margin-top: 7rem;
+
     margin-bottom: 7rem;
   }
 `;
@@ -404,32 +251,7 @@ const About = () => {
 
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <NavBar>
-          <Link href="/" passHref>
-            <LogoDiv>
-              <Image
-                className={styles.logo}
-                src={`${assetPrefix}/saraheddeb.svg`}
-                alt="Sarah Eddeb Logo"
-                width={38}
-                height={38}
-                priority
-              />
-              <Logo>Sarah Eddeb</Logo>
-            </LogoDiv>
-          </Link>
-          <NavLinksDiv>
-            <Link href="/#work" passHref>
-              <NavLinks href="#work">Work</NavLinks>
-            </Link>
-            <Link href="/Abour" passHref>
-              <NavLinks href="#about">About</NavLinks>
-            </Link>
-            <NavLinks href="#contact">Contact</NavLinks>
-          </NavLinksDiv>
-        </NavBar>
-      </div>
+      <NavBar />
 
       <AboutSection>
         <AboutSectionLeft>

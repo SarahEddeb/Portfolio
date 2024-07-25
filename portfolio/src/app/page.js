@@ -4,68 +4,7 @@ import Image from "next/image";
 import styles from "../app/page.module.css";
 import styled from "styled-components";
 import Link from "next/link";
-
-const NavBar = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const LogoDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-
-  @media (max-width: 480px) {
-    gap: 6px;
-  }
-`;
-
-const Logo = styled.a`
-  color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  letter-spacing: 0.48px;
-  line-height: normal;
-  white-space: nowrap;
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
-
-  @media (max-width: 480px) {
-    display: none !important;
-  }
-`;
-
-const NavLinksDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-`;
-
-const NavLinks = styled.a`
-  color: inherit;
-  font-family: "Nohemi-Regular", Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: normal;
-
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    font-size: 18px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 16px;
-  }
-`;
+import NavBar from "./components/NavBar";
 
 const H1 = styled.h1`
   color: inherit;
@@ -663,28 +602,8 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <NavBar>
-          <LogoDiv>
-            <Image
-              className={styles.logo}
-              src={`${assetPrefix}/saraheddeb.svg`}
-              alt="Sarah Eddeb Logo"
-              width={38}
-              height={38}
-              priority
-            />
-            <Logo>Sarah Eddeb</Logo>
-          </LogoDiv>
-          <NavLinksDiv>
-            <NavLinks href="#work">Work</NavLinks>
-            <Link href="/About">
-              <NavLinks href="#about">About</NavLinks>
-            </Link>
-            <NavLinks href="#contact">Contact</NavLinks>
-          </NavLinksDiv>
-        </NavBar>
-      </div>
+      
+      <NavBar />
 
       <HeaderSection>
         <H2>I’m Sarah Eddeb</H2>
