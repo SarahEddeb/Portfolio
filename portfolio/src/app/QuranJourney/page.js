@@ -446,6 +446,12 @@ const QuranJourney = () => {
           quality={100}
           unoptimized={true}
         />
+        <Image
+          src={`${assetPrefix}/quranjourney4.png`}
+          alt="Arrow Top Right"
+          quality={100}
+          unoptimized={true}
+        />
       </ImagesDiv>
       <section id="contact" />
       <ContactSection>
