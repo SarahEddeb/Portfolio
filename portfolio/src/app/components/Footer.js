@@ -17,7 +17,7 @@ const FooterDiv = styled.div`
     margin-bottom: 1rem;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 550px) {
     align-items: center;
     justify-content: center;
   }
@@ -70,7 +70,7 @@ const FooterLinks = styled.a`
     font-size: 18px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 550px) {
     display: none !important;
   }
 `;
