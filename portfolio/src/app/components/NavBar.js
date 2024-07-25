@@ -1,7 +1,7 @@
 "use client";
 
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import Image from "next/image";
 import styles from "../../app/page.module.css";
 import Link from "next/link";
@@ -69,11 +69,12 @@ const NavLinks = styled.a`
 `;
 
 const NavBar = () => {
-    const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
+  const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
 
-    return (
-        <div className={styles.description}>
-        <NavBarDiv>
+  return (
+    <div className={styles.description}>
+      <NavBarDiv>
+        <Link href="/">
           <LogoDiv>
             <Image
               className={styles.logo}
@@ -85,16 +86,20 @@ const NavBar = () => {
             />
             <Logo>Sarah Eddeb</Logo>
           </LogoDiv>
-          <NavLinksDiv>
+        </Link>
+
+        <NavLinksDiv>
+          <Link href="/">
             <NavLinks href="#work">Work</NavLinks>
-            <Link href="/About">
-              <NavLinks href="#about">About</NavLinks>
-            </Link>
-            <NavLinks href="#contact">Contact</NavLinks>
-          </NavLinksDiv>
-        </NavBarDiv>
-      </div>
-    );
-  };
-  
-  export default NavBar;
+          </Link>
+          <Link href="/About">
+            <NavLinks href="#about">About</NavLinks>
+          </Link>
+          <NavLinks href="#contact">Contact</NavLinks>
+        </NavLinksDiv>
+      </NavBarDiv>
+    </div>
+  );
+};
+
+export default NavBar;
