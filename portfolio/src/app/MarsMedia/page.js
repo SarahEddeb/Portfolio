@@ -132,7 +132,7 @@ const HeaderSection = styled.div`
 `;
 
 const MainTextDiv = styled.div`
-  width: 30%;
+  width: 45%;
 
   transition: all 0.3s ease;
 
@@ -273,8 +273,12 @@ const MarsMedia = () => {
         <Info>
           <MainTextDiv>
             <MainText>
-              A sleek and intuitive interface that transforms the camera rental
-              experience
+              A complete visual identity redesign for a motion control company
+              as they transitioned into broader media production. I updated
+              their existing logo by enhancing its brutalist elements and
+              integrating their signature orange to create a fresh, modern look.
+              The project included designing logos, color scheme, 
+              business cards, letterheads, email signatures, and website assets.
             </MainText>
           </MainTextDiv>
 

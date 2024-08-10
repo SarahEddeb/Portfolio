@@ -132,7 +132,7 @@ const HeaderSection = styled.div`
 `;
 
 const MainTextDiv = styled.div`
-  width: 30%;
+  width: 45%;
 
   transition: all 0.3s ease;
 
@@ -273,8 +273,12 @@ const QamarCo = () => {
         <Info>
           <MainTextDiv>
             <MainText>
-              A sleek and intuitive interface that transforms the camera rental
-              experience
+              A visual identity design project for an apparel business that
+              blends Middle Eastern motifs with modern aesthetics. I crafted a
+              sleek and clean design, including a logo with alternate
+              variations, a cohesive color scheme, a custom pattern, and
+              comprehensive brand guidelines that celebrate Middle Eastern
+              heritage with a contemporary edge
             </MainText>
           </MainTextDiv>
 
@@ -285,30 +289,12 @@ const QamarCo = () => {
       </HeaderSection>
 
       <ImagesDiv>
-        <Image
-          src={`${assetPrefix}/qamar1.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/qamar2.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/qamar3.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/qamar4.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/qamar5.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/qamar6.png`}
-          alt="Arrow Top Right"
-        />
+        <Image src={`${assetPrefix}/qamar1.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/qamar2.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/qamar3.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/qamar4.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/qamar5.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/qamar6.png`} alt="Arrow Top Right" />
       </ImagesDiv>
       <section id="contact" />
       <ContactSection>
