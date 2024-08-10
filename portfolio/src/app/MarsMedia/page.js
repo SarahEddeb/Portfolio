@@ -256,7 +256,7 @@ const Info = styled.div`
   }
 `;
 
-const QamarCo = () => {
+const MarsMedia = () => {
   const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
 
   return (
@@ -266,8 +266,8 @@ const QamarCo = () => {
       <HeaderSection>
         <HeaderRoleSection>
           <HeaderSubSection>
-            <H1>Qamar</H1>
-            <H1>Co</H1>
+            <H1>Mars</H1>
+            <H1>Media</H1>
           </HeaderSubSection>
         </HeaderRoleSection>
         <Info>
@@ -285,30 +285,10 @@ const QamarCo = () => {
       </HeaderSection>
 
       <ImagesDiv>
-        <Image
-          src={`${assetPrefix}/qamar1.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/qamar2.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/qamar3.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/qamar4.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/qamar5.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/qamar6.png`}
-          alt="Arrow Top Right"
-        />
+        <Image src={`${assetPrefix}/mars1.png`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/mars2.png`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/mars3.png`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/mars4.png`} alt="Arrow Top Right" />
       </ImagesDiv>
       <section id="contact" />
       <ContactSection>
@@ -323,4 +303,4 @@ const QamarCo = () => {
   );
 };
 
-export default QamarCo;
+export default MarsMedia;
