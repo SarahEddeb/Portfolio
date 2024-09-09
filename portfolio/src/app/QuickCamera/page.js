@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
 
 const HeaderRoleSection = styled.div`
   display: flex;
@@ -257,6 +258,8 @@ const QuickCamera = () => {
 
   return (
     <main className={styles.main}>
+      <Loading />
+
       <NavBar />
 
       <HeaderSection>
@@ -282,22 +285,10 @@ const QuickCamera = () => {
       </HeaderSection>
 
       <ImagesDiv>
-        <Image
-          src={`${assetPrefix}/quick1.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/quick2.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/quick3.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/quick4.svg`}
-          alt="Arrow Top Right"
-        />
+        <Image src={`${assetPrefix}/quick1.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/quick2.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/quick3.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/quick4.svg`} alt="Arrow Top Right" />
         <Image
           src={`${assetPrefix}/quick5.png`}
           alt="Arrow Top Right"

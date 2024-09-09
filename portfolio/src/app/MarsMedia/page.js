@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
 
 const HeaderRoleSection = styled.div`
   display: flex;
@@ -261,6 +262,8 @@ const MarsMedia = () => {
 
   return (
     <main className={styles.main}>
+      <Loading />
+
       <NavBar />
 
       <HeaderSection>
@@ -277,8 +280,8 @@ const MarsMedia = () => {
               as they transitioned into broader media production. I updated
               their existing logo by enhancing its brutalist elements and
               integrating their signature orange to create a fresh, modern look.
-              The project included designing logos, color scheme, 
-              business cards, letterheads, email signatures, and website assets.
+              The project included designing logos, color scheme, business
+              cards, letterheads, email signatures, and website assets.
             </MainText>
           </MainTextDiv>
 

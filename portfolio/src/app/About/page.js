@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
 
 const H2 = styled.h2`
   color: inherit;
@@ -105,7 +106,6 @@ const BodyText = styled.p`
   }
 `;
 
-
 const AboutSection = styled.div`
   display: flex;
   width: 100%;
@@ -119,7 +119,7 @@ const AboutSection = styled.div`
   @media (max-width: 992px) {
     flex-direction: column;
     gap: 20px;
-      margin-top: 7rem;
+    margin-top: 7rem;
 
     margin-bottom: 10rem;
   }
@@ -180,6 +180,8 @@ const About = () => {
 
   return (
     <main className={styles.main}>
+      <Loading />
+
       <NavBar />
 
       <AboutSection>
@@ -221,8 +223,6 @@ const About = () => {
           <H2>saraheddeb@gmail.com</H2>
         </a>
       </ContactSection>
-
-      
 
       <Footer />
     </main>

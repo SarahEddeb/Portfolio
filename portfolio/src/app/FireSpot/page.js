@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
 
 const HeaderRoleSection = styled.div`
   display: flex;
@@ -261,6 +262,8 @@ const FireSpot = () => {
 
   return (
     <main className={styles.main}>
+      <Loading />
+
       <NavBar />
 
       <HeaderSection>

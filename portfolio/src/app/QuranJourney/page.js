@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
 
 const HeaderRoleSection = styled.div`
   display: flex;
@@ -198,7 +199,7 @@ const ImagesDiv = styled.div`
 
   margin-bottom: 15rem;
 
-   @media (max-width: 768px) {
+  @media (max-width: 768px) {
     gap: 15px;
   }
 
@@ -255,6 +256,8 @@ const QuranJourney = () => {
 
   return (
     <main className={styles.main}>
+      <Loading />
+
       <NavBar />
 
       <HeaderSection>
@@ -281,14 +284,8 @@ const QuranJourney = () => {
       </HeaderSection>
 
       <ImagesDiv>
-        <Image
-          src={`${assetPrefix}/quranjourney1.png`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/quranjourney2.svg`}
-          alt="Arrow Top Right"
-        />
+        <Image src={`${assetPrefix}/quranjourney1.png`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/quranjourney2.svg`} alt="Arrow Top Right" />
         <Image
           src={`${assetPrefix}/quranjourney3.png`}
           alt="Arrow Top Right"

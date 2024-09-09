@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Loading from "./components/Loading";
 
 const H1 = styled.h1`
   color: inherit;
@@ -542,6 +543,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
+      <Loading></Loading>
       <NavBar />
 
       <HeaderSection>

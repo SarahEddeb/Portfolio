@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
 
 const HeaderRoleSection = styled.div`
   display: flex;
@@ -170,7 +171,6 @@ const Image = styled.img`
   width: 100%;
 `;
 
-
 const ContactSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -199,7 +199,7 @@ const ImagesDiv = styled.div`
 
   margin-bottom: 15rem;
 
-   @media (max-width: 768px) {
+  @media (max-width: 768px) {
     gap: 15px;
   }
 
@@ -257,6 +257,8 @@ const BubbleConnection = () => {
 
   return (
     <main className={styles.main}>
+      <Loading />
+
       <NavBar />
 
       <HeaderSection>
@@ -309,7 +311,6 @@ const BubbleConnection = () => {
       </ContactSection>
 
       <Footer />
-       
     </main>
   );
 };
