@@ -8,6 +8,7 @@ import Link from "next/link";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
+import './page.module.css'
 
 const H1 = styled.h1`
   color: inherit;
