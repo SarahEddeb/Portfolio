@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import styles from "../../app/page.module.css";
 import styled from "styled-components";
 import Link from "next/link";
@@ -261,54 +261,56 @@ const QamarCo = () => {
   const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
 
   return (
-    <main className={styles.main}>
-      <Loading />
+    <Suspense fallback={<Loading />}>
+      <main className={styles.main}>
+        <Loading />
 
-      <NavBar />
+        <NavBar />
 
-      <HeaderSection>
-        <HeaderRoleSection>
-          <HeaderSubSection>
-            <H1>Qamar</H1>
-            <H1>Co</H1>
-          </HeaderSubSection>
-        </HeaderRoleSection>
-        <Info>
-          <MainTextDiv>
-            <MainText>
-              A visual identity design project for an apparel business that
-              blends Middle Eastern motifs with modern aesthetics. I crafted a
-              sleek and clean design, including a logo with alternate
-              variations, a cohesive color scheme, a custom pattern, and
-              comprehensive brand guidelines that celebrate Middle Eastern
-              heritage with a contemporary edge
-            </MainText>
-          </MainTextDiv>
+        <HeaderSection>
+          <HeaderRoleSection>
+            <HeaderSubSection>
+              <H1>Qamar</H1>
+              <H1>Co</H1>
+            </HeaderSubSection>
+          </HeaderRoleSection>
+          <Info>
+            <MainTextDiv>
+              <MainText>
+                A visual identity design project for an apparel business that
+                blends Middle Eastern motifs with modern aesthetics. I crafted a
+                sleek and clean design, including a logo with alternate
+                variations, a cohesive color scheme, a custom pattern, and
+                comprehensive brand guidelines that celebrate Middle Eastern
+                heritage with a contemporary edge
+              </MainText>
+            </MainTextDiv>
 
-          <Tags>
-            <Label>Visual Identity</Label>
-          </Tags>
-        </Info>
-      </HeaderSection>
+            <Tags>
+              <Label>Visual Identity</Label>
+            </Tags>
+          </Info>
+        </HeaderSection>
 
-      <ImagesDiv>
-        <Image src={`${assetPrefix}/qamar1.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/qamar2.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/qamar3.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/qamar4.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/qamar5.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/qamar6.png`} alt="Arrow Top Right" />
-      </ImagesDiv>
-      <section id="contact" />
-      <ContactSection>
-        <H3>Let’s Connect</H3>
-        <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
-          <H2>saraheddeb@gmail.com</H2>
-        </a>
-      </ContactSection>
+        <ImagesDiv>
+          <Image src={`${assetPrefix}/qamar1.svg`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/qamar2.svg`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/qamar3.svg`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/qamar4.svg`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/qamar5.svg`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/qamar6.png`} alt="Arrow Top Right" />
+        </ImagesDiv>
+        <section id="contact" />
+        <ContactSection>
+          <H3>Let’s Connect</H3>
+          <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
+            <H2>saraheddeb@gmail.com</H2>
+          </a>
+        </ContactSection>
 
-      <Footer />
-    </main>
+        <Footer />
+      </main>
+    </Suspense>
   );
 };
 

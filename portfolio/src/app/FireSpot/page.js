@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import styles from "../../app/page.module.css";
 import styled from "styled-components";
 import Link from "next/link";
@@ -261,55 +261,57 @@ const FireSpot = () => {
   const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
 
   return (
-    <main className={styles.main}>
-      <Loading />
+    <Suspense fallback={<Loading />}>
+      <main className={styles.main}>
+        <Loading />
 
-      <NavBar />
+        <NavBar />
 
-      <HeaderSection>
-        <HeaderRoleSection>
-          <HeaderSubSection>
-            <H1>Fire</H1>
-            <H1>Spot</H1>
-          </HeaderSubSection>
-        </HeaderRoleSection>
-        <Info>
-          <MainTextDiv>
-            <MainText>
-              A vibrant visual identity design for Fire Spot, a dessert café
-              that radiates fun, cheerfulness, and warmth. The design features
-              lively colors, playful typography, and engaging visuals, crafted
-              to create a welcoming atmosphere that delights customers. This
-              spirited identity is not only designed to enhance the café’s
-              inviting ambiance but also to be adaptable for franchising,
-              ensuring brand consistency and appeal across multiple locations.
-            </MainText>
-          </MainTextDiv>
+        <HeaderSection>
+          <HeaderRoleSection>
+            <HeaderSubSection>
+              <H1>Fire</H1>
+              <H1>Spot</H1>
+            </HeaderSubSection>
+          </HeaderRoleSection>
+          <Info>
+            <MainTextDiv>
+              <MainText>
+                A vibrant visual identity design for Fire Spot, a dessert café
+                that radiates fun, cheerfulness, and warmth. The design features
+                lively colors, playful typography, and engaging visuals, crafted
+                to create a welcoming atmosphere that delights customers. This
+                spirited identity is not only designed to enhance the café’s
+                inviting ambiance but also to be adaptable for franchising,
+                ensuring brand consistency and appeal across multiple locations.
+              </MainText>
+            </MainTextDiv>
 
-          <Tags>
-            <Label>Visual Identity</Label>
-          </Tags>
-        </Info>
-      </HeaderSection>
+            <Tags>
+              <Label>Visual Identity</Label>
+            </Tags>
+          </Info>
+        </HeaderSection>
 
-      <ImagesDiv>
-        <Image src={`${assetPrefix}/fire1.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/fire2.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/fire3.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/fire4.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/fire5.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/fire6.svg`} alt="Arrow Top Right" />
-      </ImagesDiv>
-      <section id="contact" />
-      <ContactSection>
-        <H3>Let’s Connect</H3>
-        <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
-          <H2>saraheddeb@gmail.com</H2>
-        </a>
-      </ContactSection>
+        <ImagesDiv>
+          <Image src={`${assetPrefix}/fire1.svg`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/fire2.svg`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/fire3.svg`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/fire4.svg`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/fire5.svg`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/fire6.svg`} alt="Arrow Top Right" />
+        </ImagesDiv>
+        <section id="contact" />
+        <ContactSection>
+          <H3>Let’s Connect</H3>
+          <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
+            <H2>saraheddeb@gmail.com</H2>
+          </a>
+        </ContactSection>
 
-      <Footer />
-    </main>
+        <Footer />
+      </main>
+    </Suspense>
   );
 };
 

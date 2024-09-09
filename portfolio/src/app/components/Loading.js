@@ -44,7 +44,7 @@ const Loading = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5000); // Minimum 2 seconds delay
+    }, 2000); // Minimum 2 seconds delay
 
     return () => clearTimeout(timer);
   }, []);

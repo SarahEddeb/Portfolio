@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, {Suspense} from "react";
 import styles from "../../app/page.module.css";
 import styled from "styled-components";
 import Link from "next/link";
@@ -257,6 +257,8 @@ const QuickCamera = () => {
   const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
 
   return (
+    <Suspense fallback={<Loading />}>
+
     <main className={styles.main}>
       <Loading />
 
@@ -318,6 +320,7 @@ const QuickCamera = () => {
 
       <Footer />
     </main>
+    </Suspense>
   );
 };
 
