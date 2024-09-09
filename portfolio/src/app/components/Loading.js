@@ -1,6 +1,7 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-
 
 const LoadingContainer = styled.div`
   display: flex;
@@ -14,12 +15,26 @@ const LoadingContainer = styled.div`
   top: 0;
   left: 0;
   z-index: 1000;
+
+  @media (max-width: 576px) {
+    height: 110vh;
+  }
 `;
 
 const LoadingGif = styled.img`
   width: 300px; // Adjust size as needed
   height: 300px; // Adjust size as needed
   position: absolute; /* Position absolute to overlap the GIF */
+
+  @media (max-width: 992px) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (max-width: 576px) {
+    width: 150px;
+    height: 150px;
+  }
 `;
 
 const LoadingText = styled.p`
@@ -27,6 +42,14 @@ const LoadingText = styled.p`
   font-family: "Nohemi", Helvetica;
   font-size: 100px;
   font-weight: 400;
+
+  @media (max-width: 992px) {
+    font-size: 75px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 50px;
+  }
 `;
 
 // Wrapper to contain the GIF and text
@@ -35,6 +58,10 @@ const LoadingWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 576px) {
+    padding-bottom: 120px;
+  }
 `;
 
 const Loading = () => {
