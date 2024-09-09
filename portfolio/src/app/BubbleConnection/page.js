@@ -1,11 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import styles from "../../app/page.module.css";
 import styled from "styled-components";
 import Link from "next/link";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
 
 const HeaderRoleSection = styled.div`
   display: flex;
@@ -170,7 +171,6 @@ const Image = styled.img`
   width: 100%;
 `;
 
-
 const ContactSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -199,7 +199,7 @@ const ImagesDiv = styled.div`
 
   margin-bottom: 15rem;
 
-   @media (max-width: 768px) {
+  @media (max-width: 768px) {
     gap: 15px;
   }
 
@@ -256,61 +256,64 @@ const BubbleConnection = () => {
   const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
 
   return (
-    <main className={styles.main}>
-      <NavBar />
+    <Suspense fallback={<Loading />}>
+      <main className={styles.main}>
+        <Loading />
 
-      <HeaderSection>
-        <HeaderRoleSection>
-          <HeaderSubSection>
-            <H1>Bubble</H1>
-            <H1>Connection</H1>
-          </HeaderSubSection>
-        </HeaderRoleSection>
-        <Info>
-          <MainTextDiv>
-            <MainText>
-              A platform designed to enhance university networking, simplifying
-              connections and interactions for a more connected campus
-              experience.
-            </MainText>
-          </MainTextDiv>
+        <NavBar />
 
-          <Tags>
-            <Label>UI/UX Design</Label>
-          </Tags>
-        </Info>
-      </HeaderSection>
+        <HeaderSection>
+          <HeaderRoleSection>
+            <HeaderSubSection>
+              <H1>Bubble</H1>
+              <H1>Connection</H1>
+            </HeaderSubSection>
+          </HeaderRoleSection>
+          <Info>
+            <MainTextDiv>
+              <MainText>
+                A platform designed to enhance university networking,
+                simplifying connections and interactions for a more connected
+                campus experience.
+              </MainText>
+            </MainTextDiv>
 
-      <ImagesDiv>
-        <Image
-          src={`${assetPrefix}/bubble1.png`}
-          alt="Arrow Top Right"
-          // quality={100}
-          // unoptimized={true}
-        />
-        <Image
-          src={`${assetPrefix}/bubble2.svg`}
-          alt="Arrow Top Right"
-          // quality={100}
-        />
-        <Image
-          src={`${assetPrefix}/bubble3.png`}
-          alt="Arrow Top Right"
-          // quality={100}
-          // unoptimized={true}
-        />
-      </ImagesDiv>
-      <section id="contact" />
-      <ContactSection>
-        <H3>Let’s Connect</H3>
-        <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
-          <H2>saraheddeb@gmail.com</H2>
-        </a>
-      </ContactSection>
+            <Tags>
+              <Label>UI/UX Design</Label>
+            </Tags>
+          </Info>
+        </HeaderSection>
 
-      <Footer />
-       
-    </main>
+        <ImagesDiv>
+          <Image
+            src={`${assetPrefix}/bubble1.png`}
+            alt="Arrow Top Right"
+            // quality={100}
+            // unoptimized={true}
+          />
+          <Image
+            src={`${assetPrefix}/bubble2.svg`}
+            alt="Arrow Top Right"
+            // quality={100}
+          />
+          <Image
+            src={`${assetPrefix}/bubble3.png`}
+            alt="Arrow Top Right"
+            // quality={100}
+            // unoptimized={true}
+          />
+        </ImagesDiv>
+        <section id="contact" />
+        <ContactSection>
+          <H3>Let’s Connect</H3>
+          <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
+            <H2>saraheddeb@gmail.com</H2>
+          </a>
+        </ContactSection>
+
+        <Footer />
+      </main>
+    </Suspense>
   );
 };
 

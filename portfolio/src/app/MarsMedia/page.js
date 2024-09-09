@@ -1,11 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import styles from "../../app/page.module.css";
 import styled from "styled-components";
 import Link from "next/link";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
 
 const HeaderRoleSection = styled.div`
   display: flex;
@@ -260,50 +261,55 @@ const MarsMedia = () => {
   const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
 
   return (
-    <main className={styles.main}>
-      <NavBar />
+    <Suspense fallback={<Loading />}>
+      <main className={styles.main}>
+        <Loading />
 
-      <HeaderSection>
-        <HeaderRoleSection>
-          <HeaderSubSection>
-            <H1>Mars</H1>
-            <H1>Media</H1>
-          </HeaderSubSection>
-        </HeaderRoleSection>
-        <Info>
-          <MainTextDiv>
-            <MainText>
-              A complete visual identity redesign for a motion control company
-              as they transitioned into broader media production. I updated
-              their existing logo by enhancing its brutalist elements and
-              integrating their signature orange to create a fresh, modern look.
-              The project included designing logos, color scheme, 
-              business cards, letterheads, email signatures, and website assets.
-            </MainText>
-          </MainTextDiv>
+        <NavBar />
 
-          <Tags>
-            <Label>Visual Identity</Label>
-          </Tags>
-        </Info>
-      </HeaderSection>
+        <HeaderSection>
+          <HeaderRoleSection>
+            <HeaderSubSection>
+              <H1>Mars</H1>
+              <H1>Media</H1>
+            </HeaderSubSection>
+          </HeaderRoleSection>
+          <Info>
+            <MainTextDiv>
+              <MainText>
+                A complete visual identity redesign for a motion control company
+                as they transitioned into broader media production. I updated
+                their existing logo by enhancing its brutalist elements and
+                integrating their signature orange to create a fresh, modern
+                look. The project included designing logos, color scheme,
+                business cards, letterheads, email signatures, and website
+                assets.
+              </MainText>
+            </MainTextDiv>
 
-      <ImagesDiv>
-        <Image src={`${assetPrefix}/mars1.png`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/mars2.png`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/mars3.png`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/mars4.png`} alt="Arrow Top Right" />
-      </ImagesDiv>
-      <section id="contact" />
-      <ContactSection>
-        <H3>Let’s Connect</H3>
-        <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
-          <H2>saraheddeb@gmail.com</H2>
-        </a>
-      </ContactSection>
+            <Tags>
+              <Label>Visual Identity</Label>
+            </Tags>
+          </Info>
+        </HeaderSection>
 
-      <Footer />
-    </main>
+        <ImagesDiv>
+          <Image src={`${assetPrefix}/mars1.png`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/mars2.png`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/mars3.png`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/mars4.png`} alt="Arrow Top Right" />
+        </ImagesDiv>
+        <section id="contact" />
+        <ContactSection>
+          <H3>Let’s Connect</H3>
+          <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
+            <H2>saraheddeb@gmail.com</H2>
+          </a>
+        </ContactSection>
+
+        <Footer />
+      </main>
+    </Suspense>
   );
 };
 

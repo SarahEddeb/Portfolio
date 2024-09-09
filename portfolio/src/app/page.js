@@ -1,11 +1,13 @@
 "use client";
 
+import { Suspense } from "react";
 import Image from "next/image";
 import styles from "../app/page.module.css";
 import styled from "styled-components";
 import Link from "next/link";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Loading from "./components/Loading";
 
 const H1 = styled.h1`
   color: inherit;
@@ -537,227 +539,241 @@ const MainTextDiv = styled.div`
   }
 `;
 
+const SuspenseWithDelay = ({ children, delay = 2000, fallback }) => {
+  const [showFallback, setShowFallback] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setShowFallback(true), delay);
+    return () => clearTimeout(timeout);
+  }, [delay]);
+
+  return <Suspense fallback={showFallback ? fallback : null}>{children}</Suspense>;
+};
+
 export default function Home() {
   const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
 
   return (
-    <main className={styles.main}>
-      <NavBar />
+    <Suspense fallback={<Loading />}>
+      <main className={styles.main}>
+        <Loading />
+        <NavBar />
 
-      <HeaderSection>
-        <H2>I’m Sarah Eddeb</H2>
-        <HeaderRoleSection>
-          <HeaderSubSection>
-            <H1>UI/UX Designer</H1>
-            <H1>&</H1>
-          </HeaderSubSection>
-          <H1>Frontend Developer</H1>
-        </HeaderRoleSection>
-        <MainTextDiv>
-          <MainText>
-            I combine the world of design and tech to create seamless digital
-            experiences
-          </MainText>
-        </MainTextDiv>
-      </HeaderSection>
+        <HeaderSection>
+          <H2>I’m Sarah Eddeb</H2>
+          <HeaderRoleSection>
+            <HeaderSubSection>
+              <H1>UI/UX Designer</H1>
+              <H1>&</H1>
+            </HeaderSubSection>
+            <H1>Frontend Developer</H1>
+          </HeaderRoleSection>
+          <MainTextDiv>
+            <MainText>
+              I combine the world of design and tech to create seamless digital
+              experiences
+            </MainText>
+          </MainTextDiv>
+        </HeaderSection>
 
-      <section id="work" />
-      <ProjectSection>
-        <H4>WORK</H4>
-        <Link href="/QuickCamera">
-          <Project>
-            <ThumbnailQC>
-              <ThumbnailImage
-                src={`${assetPrefix}/quickcamera_thumbnail.png`}
-                alt="Arrow Top Right"
-                // quality={100}
-                // unoptimized={true}
+        <section id="work" />
+        <ProjectSection>
+          <H4>WORK</H4>
+          <Link href="/QuickCamera">
+            <Project>
+              <ThumbnailQC>
+                <ThumbnailImage
+                  src={`${assetPrefix}/quickcamera_thumbnail.png`}
+                  alt="Arrow Top Right"
+                  // quality={100}
+                  // unoptimized={true}
+                />
+              </ThumbnailQC>
+              <ProjectInfoDiv>
+                <ProjectInfoDivLeft>
+                  <ProjectNameDiv>
+                    <ProjectName>Quick Camera</ProjectName>
+                    <Image
+                      className={styles.logo}
+                      src={`${assetPrefix}/arrow-top-right.svg`}
+                      alt="Arrow Top Right"
+                      width={20}
+                      height={20}
+                      priority
+                    />
+                  </ProjectNameDiv>
+                  <ProjectBlurbDiv>
+                    <MainText>
+                      A sleek and intuitive interface that transforms the camera
+                      rental experience
+                    </MainText>
+                  </ProjectBlurbDiv>
+                </ProjectInfoDivLeft>
+                <ProjectInfoDivRight>
+                  <Tags>
+                    <Label>Visual Identity</Label>
+                    <Label>UI/UX Design</Label>
+                  </Tags>
+                </ProjectInfoDivRight>
+              </ProjectInfoDiv>
+            </Project>
+          </Link>
+
+          <Link href="/BubbleConnection">
+            <Project>
+              <Thumbnail>
+                <ThumbnailImageBubble
+                  src={`${assetPrefix}/bubble_thumbnail.svg`}
+                  alt="Arrow Top Right"
+                  // quality={100}
+                />
+              </Thumbnail>
+              <ProjectInfoDiv>
+                <ProjectInfoDivLeft>
+                  <ProjectNameDiv>
+                    <ProjectName>Bubble Connection App</ProjectName>
+                    <Image
+                      className={styles.logo}
+                      src={`${assetPrefix}/arrow-top-right.svg`}
+                      alt="Arrow Top Right"
+                      width={20}
+                      height={20}
+                      priority
+                    />
+                  </ProjectNameDiv>
+                  <ProjectBlurbDiv>
+                    <MainText>
+                      A platform designed to enhance university networking,
+                      simplifying connections and interactions for a more
+                      connected campus experience.
+                    </MainText>
+                  </ProjectBlurbDiv>
+                </ProjectInfoDivLeft>
+                <ProjectInfoDivRight>
+                  <Tags>
+                    <Label>UI/UX Design</Label>
+                  </Tags>
+                </ProjectInfoDivRight>
+              </ProjectInfoDiv>
+            </Project>
+          </Link>
+
+          <Link href="/QuranJourney">
+            <Project>
+              <ThumbnailQC>
+                <ThumbnailImageQJ
+                  src={`${assetPrefix}/quranjourney_thumbnail.png`}
+                  alt="Arrow Top Right"
+                  // quality={100}
+                  // unoptimized={true}
+                />
+              </ThumbnailQC>
+              <ProjectInfoDiv>
+                <ProjectInfoDivLeft>
+                  <ProjectNameDiv>
+                    <ProjectName>Quran Journey</ProjectName>
+                    <Image
+                      className={styles.logo}
+                      src={`${assetPrefix}/arrow-top-right.svg`}
+                      alt="Arrow Top Right"
+                      width={20}
+                      height={20}
+                      priority
+                    />
+                  </ProjectNameDiv>
+                  <ProjectBlurbDiv>
+                    <MainText>
+                      A web app that transforms Quranic study into an intuitive,
+                      organized experience, making every Surah easy to access
+                      and explore.
+                    </MainText>
+                  </ProjectBlurbDiv>
+                </ProjectInfoDivLeft>
+                <ProjectInfoDivRight>
+                  <Tags>
+                    <Label>Visual Identity</Label>
+                    <Label>UI/UX Design</Label>
+                    <Label>Frontend Dev</Label>
+                  </Tags>
+                </ProjectInfoDivRight>
+              </ProjectInfoDiv>
+            </Project>
+          </Link>
+        </ProjectSection>
+
+        <ContactSection>
+          <a
+            href="https://github.com/SarahEddeb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GithubRotate style={{ marginBottom: "3rem" }}>
+              <Image
+                className={styles.logo}
+                src={`${assetPrefix}/github.svg`}
+                alt="Github Logo"
+                // layout="intrinsic"
+                width={100}
+                height={100}
+                priority
               />
-            </ThumbnailQC>
-            <ProjectInfoDiv>
-              <ProjectInfoDivLeft>
-                <ProjectNameDiv>
-                  <ProjectName>Quick Camera</ProjectName>
-                  <Image
-                    className={styles.logo}
-                    src={`${assetPrefix}/arrow-top-right.svg`}
-                    alt="Arrow Top Right"
-                    width={20}
-                    height={20}
-                    priority
-                  />
-                </ProjectNameDiv>
-                <ProjectBlurbDiv>
-                  <MainText>
-                    A sleek and intuitive interface that transforms the camera
-                    rental experience
-                  </MainText>
-                </ProjectBlurbDiv>
-              </ProjectInfoDivLeft>
-              <ProjectInfoDivRight>
-                <Tags>
-                  <Label>Visual Identity</Label>
-                  <Label>UI/UX Design</Label>
-                </Tags>
-              </ProjectInfoDivRight>
-            </ProjectInfoDiv>
-          </Project>
-        </Link>
+            </GithubRotate>
+          </a>
+          <H2>For My Dev Creations</H2>
+          <a
+            href="https://github.com/SarahEddeb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <H3 style={{ marginBottom: "5rem", textAlign: "center" }}>
+              Check Out My Github
+            </H3>
+          </a>
+        </ContactSection>
 
-        <Link href="/BubbleConnection">
-          <Project>
-            <Thumbnail>
-              <ThumbnailImageBubble
-                src={`${assetPrefix}/bubble_thumbnail.svg`}
-                alt="Arrow Top Right"
-                // quality={100}
-              />
-            </Thumbnail>
-            <ProjectInfoDiv>
-              <ProjectInfoDivLeft>
-                <ProjectNameDiv>
-                  <ProjectName>Bubble Connection App</ProjectName>
-                  <Image
-                    className={styles.logo}
-                    src={`${assetPrefix}/arrow-top-right.svg`}
-                    alt="Arrow Top Right"
-                    width={20}
-                    height={20}
-                    priority
-                  />
-                </ProjectNameDiv>
-                <ProjectBlurbDiv>
-                  <MainText>
-                    A platform designed to enhance university networking,
-                    simplifying connections and interactions for a more
-                    connected campus experience.
-                  </MainText>
-                </ProjectBlurbDiv>
-              </ProjectInfoDivLeft>
-              <ProjectInfoDivRight>
-                <Tags>
-                  <Label>UI/UX Design</Label>
-                </Tags>
-              </ProjectInfoDivRight>
-            </ProjectInfoDiv>
-          </Project>
-        </Link>
+        <section id="about" />
+        <AboutSection>
+          <AboutSectionLeft>
+            <H4>ABOUT ME</H4>
+            <H3>Sarah’s Backstory</H3>
+            <AboutFactsDiv>
+              <AboutFacts>
+                <H2>20+</H2>
+                <H4>PROJECTS</H4>
+              </AboutFacts>
+              <AboutFacts>
+                <H2>15+</H2>
+                <H4>CLIENTS</H4>
+              </AboutFacts>
+            </AboutFactsDiv>
+          </AboutSectionLeft>
+          <AboutSectionRight>
+            <BodyText>
+              I’m Sarah Eddeb, a seasoned creative with a rich background in
+              both graphic design and coding. My journey began long before
+              university, where I developed my skills in design and development,
+              setting the stage for a career that bridges tech and artistry. As
+              a computer science graduate, I’ve immersed myself in UI/UX design,
+              full-stack web development, and visual identity design. With six
+              years of freelancing and a track record of impactful projects, I
+              bring a wealth of experience to every challenge. Today, I
+              specialize in freelance projects that span UI/UX, frontend
+              development, and occasional visual identity work, continually
+              refining my craft to deliver innovative and engaging solutions.
+            </BodyText>
+          </AboutSectionRight>
+        </AboutSection>
 
-        <Link href="/QuranJourney">
-          <Project>
-            <ThumbnailQC>
-              <ThumbnailImageQJ
-                src={`${assetPrefix}/quranjourney_thumbnail.png`}
-                alt="Arrow Top Right"
-                // quality={100}
-                // unoptimized={true}
-              />
-            </ThumbnailQC>
-            <ProjectInfoDiv>
-              <ProjectInfoDivLeft>
-                <ProjectNameDiv>
-                  <ProjectName>Quran Journey</ProjectName>
-                  <Image
-                    className={styles.logo}
-                    src={`${assetPrefix}/arrow-top-right.svg`}
-                    alt="Arrow Top Right"
-                    width={20}
-                    height={20}
-                    priority
-                  />
-                </ProjectNameDiv>
-                <ProjectBlurbDiv>
-                  <MainText>
-                    A web app that transforms Quranic study into an intuitive,
-                    organized experience, making every Surah easy to access and
-                    explore.
-                  </MainText>
-                </ProjectBlurbDiv>
-              </ProjectInfoDivLeft>
-              <ProjectInfoDivRight>
-                <Tags>
-                  <Label>Visual Identity</Label>
-                  <Label>UI/UX Design</Label>
-                  <Label>Frontend Dev</Label>
-                </Tags>
-              </ProjectInfoDivRight>
-            </ProjectInfoDiv>
-          </Project>
-        </Link>
-      </ProjectSection>
+        <section id="contact" />
+        <ContactSection>
+          <H3>Let’s Connect</H3>
+          <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
+            <H2>saraheddeb@gmail.com</H2>
+          </a>
+        </ContactSection>
 
-      <ContactSection>
-        <a
-          href="https://github.com/SarahEddeb"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GithubRotate style={{ marginBottom: "3rem" }}>
-            <Image
-              className={styles.logo}
-              src={`${assetPrefix}/github.svg`}
-              alt="Github Logo"
-              // layout="intrinsic"
-              width={100}
-              height={100}
-              priority
-            />
-          </GithubRotate>
-        </a>
-        <H2>For My Dev Creations</H2>
-        <a
-          href="https://github.com/SarahEddeb"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <H3 style={{ marginBottom: "5rem", textAlign: "center" }}>
-            Check Out My Github
-          </H3>
-        </a>
-      </ContactSection>
-
-      <section id="about" />
-      <AboutSection>
-        <AboutSectionLeft>
-          <H4>ABOUT ME</H4>
-          <H3>Sarah’s Backstory</H3>
-          <AboutFactsDiv>
-            <AboutFacts>
-              <H2>20+</H2>
-              <H4>PROJECTS</H4>
-            </AboutFacts>
-            <AboutFacts>
-              <H2>15+</H2>
-              <H4>CLIENTS</H4>
-            </AboutFacts>
-          </AboutFactsDiv>
-        </AboutSectionLeft>
-        <AboutSectionRight>
-          <BodyText>
-            I’m Sarah Eddeb, a seasoned creative with a rich background in both
-            graphic design and coding. My journey began long before university,
-            where I developed my skills in design and development, setting the
-            stage for a career that bridges tech and artistry. As a computer
-            science graduate, I’ve immersed myself in UI/UX design, full-stack
-            web development, and visual identity design. With six years of
-            freelancing and a track record of impactful projects, I bring a
-            wealth of experience to every challenge. Today, I specialize in
-            freelance projects that span UI/UX, frontend development, and
-            occasional visual identity work, continually refining my craft to
-            deliver innovative and engaging solutions.
-          </BodyText>
-        </AboutSectionRight>
-      </AboutSection>
-
-      <section id="contact" />
-      <ContactSection>
-        <H3>Let’s Connect</H3>
-        <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
-          <H2>saraheddeb@gmail.com</H2>
-        </a>
-      </ContactSection>
-
-      <Footer />
-    </main>
+        <Footer />
+      </main>
+    </Suspense>
   );
 }

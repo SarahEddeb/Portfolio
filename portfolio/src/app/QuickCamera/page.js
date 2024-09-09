@@ -1,11 +1,12 @@
 "use client";
 
-import React from "react";
+import React, {Suspense} from "react";
 import styles from "../../app/page.module.css";
 import styled from "styled-components";
 import Link from "next/link";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
 
 const HeaderRoleSection = styled.div`
   display: flex;
@@ -256,7 +257,11 @@ const QuickCamera = () => {
   const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
 
   return (
+    <Suspense fallback={<Loading />}>
+
     <main className={styles.main}>
+      <Loading />
+
       <NavBar />
 
       <HeaderSection>
@@ -282,22 +287,10 @@ const QuickCamera = () => {
       </HeaderSection>
 
       <ImagesDiv>
-        <Image
-          src={`${assetPrefix}/quick1.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/quick2.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/quick3.svg`}
-          alt="Arrow Top Right"
-        />
-        <Image
-          src={`${assetPrefix}/quick4.svg`}
-          alt="Arrow Top Right"
-        />
+        <Image src={`${assetPrefix}/quick1.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/quick2.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/quick3.svg`} alt="Arrow Top Right" />
+        <Image src={`${assetPrefix}/quick4.svg`} alt="Arrow Top Right" />
         <Image
           src={`${assetPrefix}/quick5.png`}
           alt="Arrow Top Right"
@@ -327,6 +320,7 @@ const QuickCamera = () => {
 
       <Footer />
     </main>
+    </Suspense>
   );
 };
 
