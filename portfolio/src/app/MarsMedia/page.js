@@ -263,7 +263,7 @@ const MarsMedia = () => {
   return (
     <Suspense fallback={<Loading />}>
       <main className={styles.main}>
-        <Loading />
+        <Loading delay={1500} />
 
         <NavBar />
 

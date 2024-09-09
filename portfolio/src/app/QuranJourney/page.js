@@ -1,6 +1,6 @@
 "use client";
 
-import React, {Suspense} from "react";
+import React, { Suspense } from "react";
 import styles from "../../app/page.module.css";
 import styled from "styled-components";
 import Link from "next/link";
@@ -256,61 +256,66 @@ const QuranJourney = () => {
 
   return (
     <Suspense fallback={<Loading />}>
+      <main className={styles.main}>
+        <Loading delay={1500} />
 
-    <main className={styles.main}>
-      <Loading />
+        <NavBar />
 
-      <NavBar />
+        <HeaderSection>
+          <HeaderRoleSection>
+            <HeaderSubSection>
+              <H1>Quran</H1>
+              <H1>Journey</H1>
+            </HeaderSubSection>
+          </HeaderRoleSection>
+          <Info>
+            <MainTextDiv>
+              <MainText>
+                A web app that transforms Quranic study into an intuitive,
+                organized experience, making every Surah easy to access and
+                explore.
+              </MainText>
+            </MainTextDiv>
 
-      <HeaderSection>
-        <HeaderRoleSection>
-          <HeaderSubSection>
-            <H1>Quran</H1>
-            <H1>Journey</H1>
-          </HeaderSubSection>
-        </HeaderRoleSection>
-        <Info>
-          <MainTextDiv>
-            <MainText>
-              A web app that transforms Quranic study into an intuitive,
-              organized experience, making every Surah easy to access and
-              explore.
-            </MainText>
-          </MainTextDiv>
+            <Tags>
+              <Label>UI/UX Design</Label>
+              <Label>Frontend Dev</Label>
+            </Tags>
+          </Info>
+        </HeaderSection>
 
-          <Tags>
-            <Label>UI/UX Design</Label>
-            <Label>Frontend Dev</Label>
-          </Tags>
-        </Info>
-      </HeaderSection>
+        <ImagesDiv>
+          <Image
+            src={`${assetPrefix}/quranjourney1.png`}
+            alt="Arrow Top Right"
+          />
+          <Image
+            src={`${assetPrefix}/quranjourney2.svg`}
+            alt="Arrow Top Right"
+          />
+          <Image
+            src={`${assetPrefix}/quranjourney3.png`}
+            alt="Arrow Top Right"
+            // quality={100}
+            // unoptimized={true}
+          />
+          <Image
+            src={`${assetPrefix}/quranjourney4.png`}
+            alt="Arrow Top Right"
+            // quality={100}
+            // unoptimized={true}
+          />
+        </ImagesDiv>
+        <section id="contact" />
+        <ContactSection>
+          <H3>Let’s Connect</H3>
+          <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
+            <H2>saraheddeb@gmail.com</H2>
+          </a>
+        </ContactSection>
 
-      <ImagesDiv>
-        <Image src={`${assetPrefix}/quranjourney1.png`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/quranjourney2.svg`} alt="Arrow Top Right" />
-        <Image
-          src={`${assetPrefix}/quranjourney3.png`}
-          alt="Arrow Top Right"
-          // quality={100}
-          // unoptimized={true}
-        />
-        <Image
-          src={`${assetPrefix}/quranjourney4.png`}
-          alt="Arrow Top Right"
-          // quality={100}
-          // unoptimized={true}
-        />
-      </ImagesDiv>
-      <section id="contact" />
-      <ContactSection>
-        <H3>Let’s Connect</H3>
-        <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
-          <H2>saraheddeb@gmail.com</H2>
-        </a>
-      </ContactSection>
-
-      <Footer />
-    </main>
+        <Footer />
+      </main>
     </Suspense>
   );
 };

@@ -64,14 +64,14 @@ const LoadingWrapper = styled.div`
   }
 `;
 
-const Loading = () => {
+const Loading = ({ delay = 2000 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Minimum 2 seconds delay
+    }, delay); // Minimum 2 seconds delay
 
     return () => clearTimeout(timer);
   }, []);

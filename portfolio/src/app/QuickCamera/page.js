@@ -1,6 +1,6 @@
 "use client";
 
-import React, {Suspense} from "react";
+import React, { Suspense } from "react";
 import styles from "../../app/page.module.css";
 import styled from "styled-components";
 import Link from "next/link";
@@ -258,68 +258,67 @@ const QuickCamera = () => {
 
   return (
     <Suspense fallback={<Loading />}>
+      <main className={styles.main}>
+        <Loading delay={1500} />
 
-    <main className={styles.main}>
-      <Loading />
+        <NavBar />
 
-      <NavBar />
+        <HeaderSection>
+          <HeaderRoleSection>
+            <HeaderSubSection>
+              <H1>Quick</H1>
+              <H1>Camera</H1>
+            </HeaderSubSection>
+          </HeaderRoleSection>
+          <Info>
+            <MainTextDiv>
+              <MainText>
+                A sleek and intuitive interface that transforms the camera
+                rental experience
+              </MainText>
+            </MainTextDiv>
 
-      <HeaderSection>
-        <HeaderRoleSection>
-          <HeaderSubSection>
-            <H1>Quick</H1>
-            <H1>Camera</H1>
-          </HeaderSubSection>
-        </HeaderRoleSection>
-        <Info>
-          <MainTextDiv>
-            <MainText>
-              A sleek and intuitive interface that transforms the camera rental
-              experience
-            </MainText>
-          </MainTextDiv>
+            <Tags>
+              <Label>Visual Identity</Label>
+              <Label>UI/UX Design</Label>
+            </Tags>
+          </Info>
+        </HeaderSection>
 
-          <Tags>
-            <Label>Visual Identity</Label>
-            <Label>UI/UX Design</Label>
-          </Tags>
-        </Info>
-      </HeaderSection>
+        <ImagesDiv>
+          <Image src={`${assetPrefix}/quick1.svg`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/quick2.svg`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/quick3.svg`} alt="Arrow Top Right" />
+          <Image src={`${assetPrefix}/quick4.svg`} alt="Arrow Top Right" />
+          <Image
+            src={`${assetPrefix}/quick5.png`}
+            alt="Arrow Top Right"
+            // quality={100}
+            // unoptimized={true}
+          />
+          <Image
+            src={`${assetPrefix}/quick6.png`}
+            alt="Arrow Top Right"
+            // quality={100}
+            // unoptimized={true}
+          />
+          <Image
+            src={`${assetPrefix}/quick7.png`}
+            alt="Arrow Top Right"
+            // quality={100}
+            // unoptimized={true}
+          />
+        </ImagesDiv>
+        <section id="contact" />
+        <ContactSection>
+          <H3>Let’s Connect</H3>
+          <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
+            <H2>saraheddeb@gmail.com</H2>
+          </a>
+        </ContactSection>
 
-      <ImagesDiv>
-        <Image src={`${assetPrefix}/quick1.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/quick2.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/quick3.svg`} alt="Arrow Top Right" />
-        <Image src={`${assetPrefix}/quick4.svg`} alt="Arrow Top Right" />
-        <Image
-          src={`${assetPrefix}/quick5.png`}
-          alt="Arrow Top Right"
-          // quality={100}
-          // unoptimized={true}
-        />
-        <Image
-          src={`${assetPrefix}/quick6.png`}
-          alt="Arrow Top Right"
-          // quality={100}
-          // unoptimized={true}
-        />
-        <Image
-          src={`${assetPrefix}/quick7.png`}
-          alt="Arrow Top Right"
-          // quality={100}
-          // unoptimized={true}
-        />
-      </ImagesDiv>
-      <section id="contact" />
-      <ContactSection>
-        <H3>Let’s Connect</H3>
-        <a href="mailto:saraheddeb@gmail.com?subject=Hello&body=I wanted to reach out to you regarding...">
-          <H2>saraheddeb@gmail.com</H2>
-        </a>
-      </ContactSection>
-
-      <Footer />
-    </main>
+        <Footer />
+      </main>
     </Suspense>
   );
 };
